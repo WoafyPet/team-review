@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+<head><meta name="robots" content="noindex,nofollow"><meta http-equiv="Content-Security-Policy" content="connect-src 'self'; form-action 'none'; object-src 'none'; frame-src 'self'; base-uri 'self'"><style>.team-review-state{box-sizing:border-box;margin:0;padding:.45rem 1rem;text-align:center;background:#282d32;color:#fff;font:500 .875rem/1.45 system-ui,sans-serif;letter-spacing:0}.team-review-state a{color:inherit}</style><script src="/team-review/review-mode.js"></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Create a pet memorial in a 3D garden. Add a photo and letter to your pet’s cabinet, light a candle, or plant a virtual tree in their memory.">
+  
+  <title>3D Pet Memorial Garden for Dogs and Cats · WoafyPet</title>
+  <link rel="stylesheet" href="/team-review/fonts.css?v=c7760d3b02dc">
+  <link rel="stylesheet" href="/team-review/styles.css?v=ce5a82e507d1">
+  <link rel="stylesheet" href="/team-review/assets/memorial-garden.css?v=b80aa867617b">
+  <link rel="stylesheet" href="/team-review/assets/garden-stations.css?v=edc90c4ef0ac">
+  <link rel="stylesheet" href="/team-review/assets/owner-circle.css?v=f97a30275d74">
+  <link rel="stylesheet" href="/team-review/assets/garden-keepsakes.css?v=ea6bae5ce8c2">
+  <link rel="stylesheet" href="/team-review/assets/garden-community.css?v=a484f8727850">
+  <link rel="modulepreload" href="/team-review/assets/garden-stations.js?v=3db14ae5fd79" id="garden-stations-module">
+  <script type="module" src="/team-review/assets/garden-visitors.js?v=05532f34c184"></script>
+  <link rel="modulepreload" href="/team-review/assets/vendor/three-r160.min.js">
+  <link rel="license" href="/team-review/assets/vendor/three-r160-LICENSE.txt">
+<meta name="theme-color" content="#F2EFE8"><link rel="stylesheet" data-woafy-theme href="/team-review/assets/brand-palette.css?v=8f81d477e942"><link rel="stylesheet" data-woafy-theme href="/team-review/assets/brand-garden.css?v=7a6617d0e90e"><link rel="canonical" href="https://www.woafmeow.com/memorial-garden/"></head>
+<body class="garden-page">
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header"><a class="brand" href="/team-review/" aria-label="WoafyPet home"><img src="/team-review/assets/woafypet-orange-logo.webp?v=54aeef96b805" alt="WoafyPet" class="" loading="eager" decoding="async"></a><nav id="site-nav" aria-label="Main navigation"><a href="/team-review/shop/" >Shop</a><details class="care-menu"><summary>Care</summary><div><a href="/team-review/memorial-garden/">Memorial Garden</a><a href="/team-review/care-guide/">Free care guide</a><a href="/team-review/find-care/">Find local care</a></div></details><a href="/team-review/about/" >Our Story</a><a href="https://www.woafy.pet/" >Smart Bed</a></nav><button class="menu-toggle" aria-label="Open menu" aria-controls="site-nav" aria-expanded="false"><span></span><span></span></button></header><aside class="team-review-state" aria-label="Team preview">Team preview · Browse freely. Signups, payments, and shared garden messages are disabled here.</aside>
+<main id="main" class="garden-main">
+  <header class="garden-intro">
+    <p class="garden-kicker">WoafyPet 3D Pet Memorial Garden</p>
+    <h1>There’s always a place for them.</h1>
+    <p>Plant a tree in their name, read memories from other families, or meet another owner in Lantern Court.</p>
+    <nav class="garden-destinations" aria-label="Explore together">
+      <a href="#plant-a-tree" data-garden-shortcut="plant">Plant a virtual tree</a>
+      <a href="#shared-memories" data-garden-shortcut="memories">Shared memories</a>
+      <a href="#memory-stones" data-garden-shortcut="stone">Memory stones</a>
+      <a href="#garden-letters" data-garden-shortcut="letter">Garden letters</a>
+      <a href="#lantern-court" data-garden-shortcut="court">Visit Lantern Court</a>
+    </nav>
+  </header>
+  <section class="garden-explore" aria-label="Explore the memorial garden">
+    <div class="garden-map" data-garden-map>
+      <div class="garden-world" data-world></div>
+      <nav class="garden-pins" aria-label="Garden destinations" data-garden-pins>
+        <a href="/team-review/care-circle/" data-place="circle"><span class="garden-pin-mark" aria-hidden="true"></span><span>Care Circle</span></a>
+        <a href="/team-review/preview-info/" data-place="profile"><span class="garden-pin-mark" aria-hidden="true"></span><span>My Care Profile</span></a>
+        <a href="/team-review/preview-info/" data-place="timeline"><span class="garden-pin-mark" aria-hidden="true"></span><span>My records</span></a>
+        <a href="/team-review/care-path/" data-place="path"><span class="garden-pin-mark" aria-hidden="true"></span><span>Find My Care Path</span></a>
+        <a href="/team-review/pet-loss-support/" data-place="support"><span class="garden-pin-mark" aria-hidden="true"></span><span>Pet Loss Support</span></a>
+        <a href="/team-review/memorial-tree/" data-place="trees"><span class="garden-pin-mark" aria-hidden="true"></span><span>Plant a Tree</span></a>
+        <a href="#tributes" data-place="memories"><span class="garden-pin-mark" aria-hidden="true"></span><span>Memory Wall</span></a>
+      </nav>
+      <div class="garden-companion-tools" data-companion-tools hidden>
+        <details class="garden-avatar" data-avatar-menu>
+          <summary>My companion</summary>
+          <form data-avatar-form>
+            <fieldset><legend>Walk with</legend><label><input type="radio" name="pet" value="dog" checked>Dog</label><label><input type="radio" name="pet" value="cat">Cat</label></fieldset>
+            <fieldset><legend>My jacket</legend><label><input type="radio" name="coat" value="#58796e" checked>Sage</label><label><input type="radio" name="coat" value="#b96d63">Rose</label><label><input type="radio" name="coat" value="#7188a7">Blue</label></fieldset>
+            <label class="garden-breed">Breed
+              <select name="breed" data-breed>
+                <optgroup label="Dogs" data-species="dog"><option value="mixed-dog">Mixed-breed dog</option><option value="golden">Golden Retriever</option><option value="husky">Siberian Husky</option><option value="beagle">Beagle</option><option value="poodle">Poodle</option><option value="corgi">Pembroke Welsh Corgi</option></optgroup>
+                <optgroup label="Cats" data-species="cat"><option value="mixed-cat">Mixed-breed cat</option><option value="shorthair">British Shorthair</option><option value="siamese">Siamese</option><option value="ragdoll">Ragdoll</option><option value="coon">Maine Coon</option><option value="bengal">Bengal</option></optgroup>
+              </select>
+            </label>
+            <fieldset data-fur-colors><legend>Their fur</legend><label><input type="radio" name="color" value="#d3a56b" checked>Honey</label><label><input type="radio" name="color" value="#8d786b">Cocoa</label><label><input type="radio" name="color" value="#efe2c9">Cream</label></fieldset>
+            <button type="button" data-pet-companion>Pet my dog</button>
+            <button type="button" data-see-companion>See my companion up close</button>
+          </form>
+        </details>
+        <details class="garden-avatar garden-meet" data-meet-menu>
+          <summary>Meet other owners</summary>
+          <div class="garden-meeting-panel">
+            <strong>Lantern Court</strong>
+            <p>Meet by the lanterns. Join the shared walk to see other owners and their companions.</p>
+            <button type="button" data-join-visitors aria-pressed="false">Join the shared walk</button>
+            <small data-visitor-status role="status">Join to let other owners see you and your companion here.</small>
+            <div class="garden-greeting" data-greeting hidden>
+              <label>Choose a visitor <select data-walk-partner></select></label>
+              <button type="button" data-walk-to-visitor>Walk over</button>
+              <button type="button" data-wave>Wave hello</button>
+              <button type="button" data-offer-hug>Offer a hug</button>
+              <div data-hug-invite hidden><small data-hug-message></small><button type="button" data-accept-hug>Accept hug</button><button type="button" data-decline-hug>Pass</button></div>
+            </div>
+          </div>
+        </details>
+      </div>
+      <div class="garden-map-controls" data-map-controls hidden>
+        <button type="button" data-turn="-1" aria-label="Rotate garden left">↶</button>
+        <button type="button" data-zoom="-1" aria-label="Zoom out">−</button>
+        <button type="button" data-reset-map aria-label="Reset garden view" title="Reset garden view"><span aria-hidden="true">⌂</span> <span data-zoom-level>100%</span></button>
+        <button type="button" data-zoom="1" aria-label="Zoom in">+</button>
+        <button type="button" data-turn="1" aria-label="Rotate garden right">↷</button>
+      </div>
+      <div class="garden-scene-tools" data-scene-tools hidden>
+        <button type="button" class="garden-town-back" data-town-back>Garden map</button>
+        <strong data-scene-name></strong>
+        <details data-object-menu><summary>Choose an object</summary><div data-object-options></div></details>
+      </div>
+      <p class="garden-map-status" data-map-status>Choose a place in the garden.</p>
+      <dialog class="garden-visit" data-visit aria-labelledby="visit-title">
+        <header class="garden-visit-bar">
+          <h2 id="visit-title">Memory Wall</h2>
+          <button class="garden-back" type="button" data-back aria-label="Return to garden" title="Return to garden">×</button>
+        </header>
+        <div class="garden-visit-body" data-visit-body>
+          <section class="garden-wall" id="tributes" data-wall>
+            <div class="garden-tribute-intro cabinet-heading">
+              <h3>A little place of their own.</h3>
+              <button type="button" class="button primary" data-create-tribute hidden>Make a cabinet</button>
+              <button class="garden-back" type="button" data-visit-family-wall>Visit shared family cabinets</button>
+              <p class="garden-private" data-tribute-hint hidden>This cabinet is private to this browser. Choose which words to share with visitors.</p>
+            </div>
+            <div class="garden-memory-list cabinet-list" data-memory-list>
+              <article class="garden-memory garden-shared" data-shared hidden>
+                <div><small>A memory shared with you</small><h3></h3><p></p><button type="button" class="garden-back" data-keep>Keep in my garden</button></div>
+              </article>
+              <label class="cabinet-picker" data-cabinet-picker hidden>Visit a cabinet <select aria-label="Visit a cabinet"></select></label>
+              <article class="garden-memory pet-cabinet" data-memory-id="bobby">
+                <div class="cabinet-portrait">
+                  <img src="/team-review/assets/bobby-happy-real.webp?v=84a7f73e3c94" alt="Bobby the husky looking up with a smile" width="640" height="858" data-portrait>
+                  <span class="cabinet-initial" data-initial hidden aria-hidden="true"></span>
+                </div>
+                <div class="cabinet-letter">
+                  <h3 data-pet-name>Bobby</h3>
+                  <small data-dates hidden></small>
+                  <p data-words>The dog who inspired WoafyPet.</p>
+                  <a href="/team-review/about/" data-bobby-story>Read Rob’s memory</a>
+                </div>
+                <fieldset class="cabinet-gifts">
+                  <legend>Leave a little love</legend>
+                  <div class="garden-memory-actions" data-gifts></div>
+                </fieldset>
+                <details class="cabinet-tending">
+                  <summary>Tree and memory stone</summary>
+                  <form data-plant-tree><label>Virtual tree dedication <input name="tree" maxlength="55" required placeholder="A name for their tree"></label><button class="garden-back" type="submit">Plant tree</button></form>
+                  <p data-private-stone hidden></p>
+                  <button class="garden-back" type="button" data-read-keepsakes="stone">Visit the memory stones</button>
+                  <button class="garden-back" type="button" data-read-keepsakes="letter">Read the garden letters</button>
+                </details>
+                <div class="garden-memory-actions cabinet-tools" data-cabinet-tools></div>
+              </article>
+            </div>
+            <p class="garden-live" data-tribute-status role="status"></p>
+            <label class="garden-share-link" data-share-link hidden>Share their name and words <input readonly aria-label="Memory link"></label>
+          </section>
+        </div>
+      </dialog>
+      <noscript><p class="garden-noscript">Turn on JavaScript to open the 3D garden and keep a tribute. Care destinations above open directly.</p></noscript>
+    </div>
+  </section>
+</main>
+<dialog class="garden-dialog" data-tribute-dialog aria-labelledby="tribute-heading">
+  <form data-tribute-form>
+    <button type="button" class="garden-dialog-close" data-close-tribute aria-label="Close tribute form">×</button>
+    <h2 id="tribute-heading">Make a memory cabinet</h2>
+    <label>Their name <input name="pet" required maxlength="55"></label>
+    <label>A private letter or favorite memory <textarea name="memory" required maxlength="800" rows="4" placeholder="I still remember…"></textarea></label>
+    <fieldset class="cabinet-dates"><legend>Your time together <small>(optional)</small></legend>
+      <label>From <input name="fromDate" type="date"></label><label>Until <input name="toDate" type="date"></label>
+    </fieldset>
+    <label>Photo <small>Optional. JPG, PNG or WebP.</small><input name="photo" type="file" accept="image/jpeg,image/png,image/webp"></label>
+    <label class="garden-remove-photo" data-remove-photo hidden><input type="checkbox" name="removePhoto"> Remove the saved photo</label>
+    <p class="garden-live" data-form-status role="status"></p>
+    <button type="submit" class="button primary">Save cabinet</button>
+  </form>
+</dialog>
+<script src="/team-review/script.js?v=176dba82b53b" defer></script>
+<script src="/team-review/assets/memorial-garden.js?v=6a6f1b038147" type="module"></script>
+<script type="module" src="/team-review/assets/garden-community.js?v=efe69ab2f51f"></script>
+<footer><a class="footer-brand" href="/team-review/" aria-label="WoafyPet home"><img src="/team-review/assets/woafypet-orange-logo.webp?v=54aeef96b805" alt="WoafyPet" class="" loading="eager" decoding="async"></a><p>More good days, together.</p><nav aria-label="Legal and support"><a href="/team-review/privacy/">Privacy policy</a><a href="/team-review/terms/">Terms &amp; conditions</a><a href="/team-review/shop/policies/">Shipping &amp; returns</a><a href="/team-review/accessibility/">Accessibility</a><a href="/team-review/support/">Contact us</a></nav><small>© 2026 WoafMeow Inc. · WoafyPet</small></footer>
+</body>
+</html>

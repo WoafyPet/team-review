@@ -1,0 +1,109 @@
+/* Memorial pages use the shared warm editorial system, with no text on photos. */
+html body.legacy-page[class] main.memorial-page {
+  --tribute-gap:clamp(28px,4vw,64px);
+  background:var(--canvas)!important;
+  color:var(--ink)!important;
+}
+html body.legacy-page[class] main.memorial-page > section {
+  width:min(1280px,calc(100% - 80px));
+  margin:0 auto;
+  padding:72px 0!important;
+  border:0;
+  border-radius:0;
+  box-shadow:none;
+}
+html body.legacy-page[class] main.memorial-page :is(h1,h2,h3,p,figure) {margin:0}
+html body.legacy-page[class] main.memorial-page :is(p,li,label,small) {color:var(--muted)!important}
+html body.legacy-page[class] main.memorial-page p {font-size:18px;line-height:1.65}
+html body.legacy-page[class] main.memorial-page .button {
+  display:inline-flex;
+  justify-content:center;
+  align-items:center;
+  width:auto;
+  max-width:100%;
+  min-height:52px!important;
+  padding:14px 24px!important;
+  white-space:nowrap!important;
+  color:#fff4e4!important;
+}
+html body.legacy-page[class] main.memorial-page .tribute-hero {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  align-items:center;
+  gap:var(--tribute-gap);
+  padding-top:36px!important;
+}
+html body.legacy-page[class] main.memorial-page .tribute-hero > figure {width:100%;height:100%;min-height:480px;overflow:hidden}
+html body.legacy-page[class] main.memorial-page .tribute-hero img {display:block;width:100%;height:100%;object-fit:cover!important;aspect-ratio:1.05}
+html body.legacy-page[class] main.memorial-page .tribute-hero-copy {text-align:center;padding:24px 10px}
+html body.legacy-page[class] main.memorial-page h1 {max-width:590px;margin-inline:auto;font-size:clamp(42px,4.6vw,64px)!important}
+html body.legacy-page[class] main.memorial-page .tribute-hero-copy > p:first-of-type {max-width:480px;margin:24px auto 28px}
+html body.legacy-page[class] main.memorial-page .tribute-small {font-size:15px!important;margin-top:17px}
+html body.legacy-page[class] main.memorial-page .tribute-status {font-size:15px!important;margin-top:16px}
+html body.legacy-page[class] main.memorial-page .tribute-status:empty {display:none}
+html body.legacy-page[class] main.memorial-page .tribute-process {border-block:1px solid var(--line);text-align:center}
+html body.legacy-page[class] main.memorial-page .tribute-process header p {margin-top:16px}
+html body.legacy-page[class] main.memorial-page .tribute-step-grid {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:36px;list-style:none;padding:0;margin:44px 0 0}
+html body.legacy-page[class] main.memorial-page .tribute-step-grid > li {display:flex;flex-direction:column;align-items:center;padding:0 15px;min-width:0}
+html body.legacy-page[class] main.memorial-page .tribute-step-number {font:400 30px/1 var(--display);color:var(--accent);margin-bottom:20px}
+html body.legacy-page[class] main.memorial-page .tribute-step-grid h3 {font-size:20px!important;margin-bottom:14px;min-height:27px}
+html body.legacy-page[class] main.memorial-page .tribute-step-grid p {font-size:17px;max-width:325px}
+html body.legacy-page[class] main.memorial-page .tribute-partner {display:grid;grid-template-columns:1.12fr 1fr;align-items:center;gap:var(--tribute-gap)}
+html body.legacy-page[class] main.memorial-page .tribute-partner-photos {display:grid;grid-template-columns:1fr 1fr;gap:14px;align-items:stretch}
+html body.legacy-page[class] main.memorial-page .tribute-partner-photos figure {overflow:hidden}
+html body.legacy-page[class] main.memorial-page .tribute-partner-photos img {display:block;width:100%;height:100%;aspect-ratio:.8;object-fit:cover!important}
+html body.legacy-page[class] main.memorial-page .tribute-partner-photos figure:first-child img {object-position:50% 70%}
+html body.legacy-page[class] main.memorial-page .tribute-partner-copy {text-align:center}
+html body.legacy-page[class] main.memorial-page .tribute-partner-copy p {max-width:470px;margin:22px auto}
+html body.legacy-page[class] main.memorial-page .tribute-partner-copy .text-link {display:block;width:fit-content;margin:0 auto 28px;text-decoration:underline}
+html body.legacy-page[class] main.memorial-page .tribute-dialog {
+  width:min(640px,calc(100% - 32px));
+  max-height:calc(100dvh - 32px);
+  padding:42px 32px 28px;
+  overflow:auto;
+  background:var(--oat)!important;
+  color:var(--ink)!important;
+  border:1px solid var(--line);
+  border-radius:6px;
+}
+html body.legacy-page[class] main.memorial-page .tribute-dialog::backdrop {background:#2b241e80}
+html body.legacy-page[class] main.memorial-page .tribute-dialog-content {padding:0;display:block;min-height:0}
+html body.legacy-page[class] main.memorial-page .tribute-dialog h2 {text-align:center;font-size:36px!important;margin:0 28px 14px}
+html body.legacy-page[class] main.memorial-page .tribute-dialog-content > p {text-align:center;font-size:16px!important;margin:0 0 24px}
+html body.legacy-page[class] main.memorial-page .tribute-dialog-close {position:absolute;top:9px;right:10px;display:grid;place-items:center;width:36px;height:36px;padding:0;border:0;background:transparent;color:var(--ink);font:400 28px/1 var(--font);cursor:pointer}
+html body.legacy-page[class] main.memorial-page .tribute-form {margin:0;padding:0!important;border:0!important;background:transparent!important;box-shadow:none!important}
+html body.legacy-page[class] main.memorial-page .tribute-form-grid {display:grid;grid-template-columns:1fr 1fr;gap:18px}
+html body.legacy-page[class] main.memorial-page .tribute-form-grid label {display:flex;flex-direction:column;gap:8px;text-align:left;font-size:15px!important;font-weight:600;line-height:1.4}
+html body.legacy-page[class] main.memorial-page .tribute-field-wide {grid-column:1/-1}
+html body.legacy-page[class] main.memorial-page .tribute-form :is(input,textarea) {background:var(--canvas)!important;font-size:16px!important;line-height:1.5;color:var(--ink)!important;min-height:48px;padding:12px 14px!important;border:1px solid #a48b71!important;border-radius:4px!important;box-shadow:none!important}
+html body.legacy-page[class] main.memorial-page .tribute-form textarea {min-height:100px}
+html body.legacy-page[class] main.memorial-page .tribute-form button[type=submit] {width:100%;margin-top:24px}
+html body.legacy-page[class] main.memorial-page .tribute-secure-note {font-size:14px!important;text-align:center;margin-top:12px}
+html body.legacy-page[class] main.memorial-page .tribute-form .form-note {margin-top:14px;text-align:center}
+html body.legacy-page[class] main.memorial-page .tribute-form .form-note:empty {display:none}
+@media(max-width:1000px) {
+  html body.legacy-page[class] main.memorial-page > section {width:calc(100% - 48px);padding-block:54px!important}
+  html body.legacy-page[class] main.memorial-page .tribute-hero > figure {min-height:400px}
+  html body.legacy-page[class] main.memorial-page .tribute-step-grid {gap:24px}
+  html body.legacy-page[class] main.memorial-page .tribute-step-grid > li {padding:0}
+}
+@media(max-width:700px) {
+  html body.legacy-page[class] main.memorial-page > section {width:calc(100% - 32px);padding-block:42px!important}
+  html body.legacy-page[class] main.memorial-page .tribute-hero {grid-template-columns:1fr;gap:24px;padding-top:16px!important}
+  html body.legacy-page[class] main.memorial-page .tribute-hero > figure {min-height:0;height:auto}
+  html body.legacy-page[class] main.memorial-page .tribute-hero img {height:auto;aspect-ratio:1.5}
+  html body.legacy-page[class] main.memorial-page .tribute-hero-copy {padding:4px 4px 0}
+  html body.legacy-page[class] main.memorial-page h1 {font-size:42px!important;max-width:360px}
+  html body.legacy-page[class] main.memorial-page .tribute-hero-copy > p:first-of-type {margin:20px auto 24px}
+  html body.legacy-page[class] main.memorial-page .tribute-step-grid {grid-template-columns:1fr;gap:28px;margin-top:32px}
+  html body.legacy-page[class] main.memorial-page .tribute-step-number {margin-bottom:12px}
+  html body.legacy-page[class] main.memorial-page .tribute-step-grid h3 {margin-bottom:8px;min-height:0}
+  html body.legacy-page[class] main.memorial-page .tribute-partner {grid-template-columns:1fr;gap:28px}
+  html body.legacy-page[class] main.memorial-page .tribute-partner-photos img {aspect-ratio:1}
+  html body.legacy-page[class] main.memorial-page .tribute-dialog {width:calc(100% - 24px);max-height:calc(100dvh - 24px);padding:44px 20px 24px}
+  html body.legacy-page[class] main.memorial-page .tribute-dialog h2 {font-size:30px!important;margin-inline:0}
+  html body.legacy-page[class] main.memorial-page .tribute-dialog-content > p {font-size:15px!important;margin-bottom:20px}
+  html body.legacy-page[class] main.memorial-page .tribute-form-grid {gap:14px}
+  html body.legacy-page[class] main.memorial-page .tribute-form-grid label {font-size:14px!important}
+  html body.legacy-page[class] main.memorial-page .tribute-form button[type=submit] {padding-inline:12px!important;font-size:15px!important}
+}

@@ -1,0 +1,68 @@
+.circle-community {padding-block:clamp(1.5rem,5vw,4rem);text-align:center}
+.circle-community>p,.circle-community form>p,.circle-community details>p {margin:.65rem auto 1rem;line-height:1.55}
+.circle-community details {max-width:42rem;margin:1rem auto;padding:1rem;border:1px solid #cdc4b4;border-radius:1rem;background:#faf7f0}
+.circle-community summary,.circle-community article button {color:#443928;font-weight:650;cursor:pointer;text-decoration:underline;text-underline-offset:.22em}
+.circle-community form {display:grid;gap:.7rem;justify-items:center;margin:1rem auto}
+.circle-community [hidden] {display:none!important}
+.circle-community label {display:grid;gap:.45rem;width:min(100%,36rem)}
+.circle-community textarea,.circle-community input {max-width:100%;padding:.7rem;border:1px solid #ab9d89;border-radius:.5rem;background:#fff;font:inherit}
+.circle-community article {max-width:42rem;margin:1rem auto;padding:1.2rem;border-top:1px solid #d8cdbd;overflow-wrap:anywhere}
+.circle-community article button {border:0;background:none;font:inherit;min-height:44px}
+.circle-community details:focus-within {outline:1px solid #a79a80}
+
+/* The same reading and composition surfaces also open inside the garden. */
+.circle-community {margin-inline:auto;max-width:68rem}
+.circle-community [data-circle-compose],
+.circle-community .circle-thread,
+.circle-garden-library {margin:1rem auto;max-width:46rem}
+.circle-community [data-circle-stories] {display:grid;gap:1rem}
+.circle-community .circle-thread {width:100%;text-align:start;margin:0 auto;padding:clamp(1rem,2.4vw,1.75rem);border:1px solid #dcd7c9;border-radius:14px;background:#fffdf8}
+.circle-community .circle-thread .circle-byline {color:#585f52;font:600 .85rem/1.5 Inter,sans-serif;margin:0 0 .6rem}
+.circle-community .circle-thread h3 {margin:0 0 .8rem;font:600 1.12rem/1.5 Inter,sans-serif;color:#2e4035;text-align:start;white-space:pre-wrap}
+.circle-community .circle-thread p,.circle-community .circle-thread li,.circle-community .circle-thread dd {line-height:1.65;overflow-wrap:anywhere}
+.circle-community .circle-thread :is(img,video,audio) {display:block;max-width:100%;max-height:18rem;object-fit:contain;margin:1rem 0}
+.circle-community .circle-thread details {border:0;border-block:1px solid #dfd9ca;border-radius:0;background:transparent;padding:.55rem 0}
+.circle-community .circle-thread .circle-owner-reply {margin:1rem 0;padding-inline-start:1rem;border-inline-start:2px solid #b7c7af}
+.circle-community .circle-owner-reply p {margin:.25rem 0;white-space:pre-wrap}
+.circle-community .circle-published-answer :is(h4,h5){color:#304335;font:600 1rem/1.5 Inter,sans-serif;margin:1.35rem 0 .4rem}
+.circle-community .circle-published-answer p {margin:.4rem 0}
+.circle-community .circle-published-answer dd {margin:0 0 .5rem}
+.circle-community .circle-thread button.circle-reply-button {color:#425941;font-weight:650;padding:.4rem .6rem}
+.circle-community [data-circle-load]:empty,.circle-community [data-circle-status]:empty {display:none}
+
+.garden-station [data-circle-shelf]:has(>[data-scene-secondary]) > .station-fold:has(.care-conversation) > summary,
+.garden-station [data-circle-shelf]:has(>[data-scene-secondary]) > [data-owner-circle] > h2 {display:none}
+.garden-station [data-circle-shelf] .care-conversation {width:100%;padding:0}
+.garden-station .circle-question-form, .circle-hub .circle-question-form {
+  display:grid;gap:1.35rem;font-family:Inter,sans-serif;text-align:start;
+}
+.garden-station .circle-question-form {padding:4px 0 12px;line-height:1.55}
+.garden-station .circle-question-form header,.garden-station .circle-question-form header p,
+.garden-station .circle-question-main,.garden-station .circle-attachment,
+.garden-station .circle-question-result,.garden-station .circle-question-result button {margin:0}
+.garden-station .circle-question-form header:not(:has([data-active-pet-summary]:not(:empty))){display:none}
+.garden-station .circle-question-form header p {font-size:.9rem;color:#536451}
+.garden-station .circle-question-form [data-account-ask-note]:empty {display:none}
+.garden-station .circle-question-main {display:grid;gap:.5rem}
+.garden-station .circle-question-form textarea {min-height:7rem;line-height:1.5;margin:0;padding:.75rem .9rem}
+.garden-station .circle-question-form label>span {font-weight:600;color:#2e4035}
+.garden-station .circle-attachment,.circle-hub .circle-attachment {border-block:1px solid #dad7c9}
+.garden-station .circle-attachment > summary,.circle-hub .circle-attachment > summary {
+  display:list-item;list-style:disclosure-closed;cursor:pointer;min-height:44px;padding:.7rem .1rem;font:550 .96rem/1.4 Inter,sans-serif;color:#425941;
+}
+.garden-station .circle-attachment[open] > summary,.circle-hub .circle-attachment[open] > summary {list-style:disclosure-open}
+.garden-station .circle-attachment > summary::after,.circle-hub .circle-attachment > summary::after {content:none!important}
+.garden-station .circle-attachment input[type=file] {background:none;border:0;padding:.5rem 0}
+.garden-station .circle-attachment input::file-selector-button,.circle-hub .circle-attachment input::file-selector-button {font:inherit;background:#f3f0e7;color:#384d3b;border:1px solid #c6cbbd;border-radius:6px;padding:.42rem .65rem;margin-right:.65rem;cursor:pointer}
+.garden-station .circle-question-result {display:grid}
+.garden-station .circle-question-result button {width:100%;background:#425c47;color:#fff;border-color:transparent}
+.garden-station .circle-account-gate {margin-top:1rem;padding:1rem;border-radius:10px;background:#eef1e7;text-align:center}
+.garden-station .circle-community {text-align:center}
+.garden-station .circle-community .circle-thread {padding:1rem}
+.garden-station .circle-garden-library {padding-top:.9rem;border-top:1px solid #d5d6c9}
+.garden-station .circle-garden-library h3 {font:550 1.35rem/1.2 Lora,Georgia,serif;margin:.4rem 0 1rem}
+.garden-station .circle-garden-library .station-fold {text-align:start}
+.garden-station .circle-garden-library .station-fold p {padding-inline:.15rem;margin:0 0 .4rem}
+.garden-station .circle-garden-library .station-fold>a {display:inline-flex;align-items:center;min-height:44px}
+.garden-station .circle-community [data-circle-compose] {background:#eef2e8;border:1px solid #c6d0bf;padding:0 .9rem;border-radius:10px}
+.garden-station .circle-community [data-circle-compose]>summary {text-decoration:none}

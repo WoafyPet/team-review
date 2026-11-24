@@ -1,0 +1,106 @@
+/* The photo fades into the same Graphite surface on wide and stacked layouts. */
+.home #main .home-hero {
+  background-color: var(--brand-graphite);
+  color: var(--brand-porcelain);
+}
+
+@media (min-width: 951px) {
+  .home #main .home-hero::before {
+    background: linear-gradient(90deg,
+      color-mix(in srgb, var(--brand-graphite) 94%, transparent) 0%,
+      color-mix(in srgb, var(--brand-graphite) 78%, transparent) 30%,
+      color-mix(in srgb, var(--brand-graphite) 40%, transparent) 48%,
+      transparent 65%);
+  }
+}
+
+.home #main .hero-copy :is(h1, .consent, .consent a, .form-status),
+.home #main .hero-copy > p {
+  color: var(--brand-porcelain);
+}
+
+.home #main .hero-copy h1 em {
+  color: color-mix(in srgb, var(--brand-porcelain) 78%, var(--brand-orange));
+}
+
+.home #main .hero-copy :is(input, button, a):focus-visible {
+  outline-color: var(--brand-porcelain);
+}
+
+/* Cognac connects Rob's letter to the family stories. */
+.bobby-story #main .story-opening,
+.home #main .pain-at-home,
+.home #main #reviews {
+  background-color: color-mix(in srgb, var(--brand-porcelain) 92%, var(--brand-cognac));
+}
+
+.home #main .bobby-copy .signature,
+.home #reviews .parent-story-copy blockquote,
+.bobby-story #main :is(.story-letter em, .signature, .care-eyebrow) {
+  color: var(--brand-cognac);
+}
+
+.home #reviews .parent-story-grid article,
+.bobby-story #main .story-pair figure {
+  background-color: var(--brand-porcelain);
+}
+
+.bobby-story #main .story-mission article {
+  border-top-color: var(--brand-cognac);
+}
+
+/* Cobalt identifies sensing, evidence and the numbered construction detail. */
+:is(.home, .smart-bed-page) #main .home-training-proof,
+.home #main .health-at-home,
+.reserve-view #main .base-information {
+  background-color: color-mix(in srgb, var(--brand-porcelain) 93%, var(--brand-cobalt));
+}
+
+:is(.home, .smart-bed-page) #main .home-training-proof strong,
+.home #main .health-at-home :is(a, summary),
+.reserve-view #main .reserve-offer {
+  color: var(--brand-cobalt);
+}
+
+.home #main .home-signal-grid article {
+  background-color: var(--brand-porcelain);
+  border-color: var(--brand-silver);
+}
+
+.home #main .home-signal-grid article svg {
+  background-color: color-mix(in srgb, var(--brand-porcelain) 86%, var(--brand-cobalt));
+  color: var(--brand-cobalt);
+}
+
+:is(.home, .smart-bed-page) #main .construction-art .layer-marker {
+  background-color: var(--brand-cobalt);
+  border-color: var(--brand-porcelain);
+  color: var(--brand-porcelain);
+}
+
+:is(.home, .smart-bed-page) #main .construction-art .layer-marker::before {
+  background-color: var(--brand-cobalt);
+}
+
+:is(.home, .smart-bed-page) #main .construction-layers .layer-number {
+  color: var(--brand-cobalt);
+  border-color: var(--brand-cobalt);
+}
+
+.smart-bed-page #main .health-story {
+  background-color: var(--brand-graphite);
+  color: var(--brand-porcelain);
+}
+
+.smart-bed-page #main .health-signals article {
+  background-color: color-mix(in srgb, var(--brand-graphite) 91%, var(--brand-cobalt));
+  border-color: color-mix(in srgb, var(--brand-graphite) 55%, var(--brand-silver));
+}
+
+.smart-bed-page #main .health-story :is(h2, h3, p, .ai-training strong) {
+  color: var(--brand-porcelain);
+}
+
+.smart-bed-page #main .health-signals a {
+  text-decoration-color: var(--brand-silver);
+}

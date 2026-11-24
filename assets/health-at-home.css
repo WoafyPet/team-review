@@ -1,0 +1,150 @@
+.pain-at-home,
+.health-at-home {
+  padding: var(--section-space) var(--home-gutter);
+  color: var(--ink);
+  text-align: center;
+}
+
+.pain-at-home { background: #f3eee7; }
+.health-at-home { background: #fbf6ef; }
+
+.pain-at-home-layout,
+.health-at-home-layout {
+  display: grid;
+  grid-template-columns: 0.92fr 1.08fr;
+  align-items: center;
+  gap: clamp(24px, 4vw, 60px);
+  max-width: 1260px;
+  margin-inline: auto;
+}
+
+.pain-at-home h2 span { display: block; }
+.pain-at-home h2 { max-width: 21ch; margin-inline: auto; }
+.pain-at-home p,
+.health-at-home header p {
+  max-width: 47ch;
+  margin: 14px auto 0;
+  color: var(--muted);
+}
+
+.health-at-home a,
+.health-sources summary {
+  color: #814121;
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
+
+.pain-at-home-layout > img,
+.health-at-home-layout > img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.pain-at-home-layout > img { aspect-ratio: 1.7; object-fit: cover; object-position: center 30%; }
+.health-at-home header p { max-width: 69ch; }
+.health-at-home-layout { margin-top: clamp(20px, 2.6vw, 36px); }
+.health-at-home-layout > img { aspect-ratio: 16/9; }
+
+.home-signal-grid {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.home-signal-grid article {
+  grid-column: span 2;
+  padding: 14px 10px;
+  background: #fffbf6;
+  border: 1px solid #dfd0bf;
+  border-radius: 8px;
+}
+
+.home-signal-grid article:nth-child(n+4) { grid-column: span 3; }
+
+.home-signal-grid svg {
+  display: block;
+  width: 34px;
+  height: 34px;
+  margin: 0 auto 8px;
+  padding: 7px;
+  border-radius: 50%;
+  background: #f1e0ce;
+  color: #835435;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.65;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* Match the five signal colors used on the Smart Base page. */
+.home-signal-grid article:nth-child(1) svg { background: #e6eee5; color: #536c57; }
+.home-signal-grid article:nth-child(2) svg { background: #e8edf3; color: #536579; }
+.home-signal-grid article:nth-child(3) svg { background: #efebdf; color: #74694e; }
+.home-signal-grid article:nth-child(5) svg { background: #ebe9f2; color: #65607b; }
+
+.home-signal-grid h3 { margin: 0; font: 600 clamp(17px, 1.4vw, 21px)/1.2 var(--display); }
+.home-signal-grid p { max-width: 27ch; margin: 6px auto 0; color: var(--muted); font-size: 15px; line-height: 1.42; }
+.health-sources { margin: 6px auto 0; font-size: 15px; }
+.health-sources summary { display: list-item; width: fit-content; padding-block: 4px; margin-inline: auto; cursor: pointer; }
+.health-sources ul { list-style: none; margin: 6px 0 0; padding: 0; }
+.health-sources li { margin: 4px 0; }
+
+@media (max-width: 960px) {
+  .health-at-home-layout { grid-template-columns: 1fr; gap: 18px; max-width: 700px; }
+  .health-at-home-layout > img { max-width: 570px; margin-inline: auto; }
+}
+
+@media (max-width: 700px) {
+  .pain-at-home-layout { grid-template-columns: 1fr; gap: 18px; }
+  .pain-at-home-layout > img { max-width: 570px; margin-inline: auto; }
+  .home-signal-grid { gap: 7px; }
+  .home-signal-grid article { padding: 12px 6px; }
+  .home-signal-grid p { font-size: 14px; }
+}
+
+@media (max-width: 359px) {
+  .home-signal-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .home-signal-grid article,
+  .home-signal-grid article:nth-child(n+4) { grid-column: auto; }
+  .home-signal-grid article:last-child { grid-column: 1 / -1; }
+}
+
+.bed-comparison {
+  padding: var(--section-space) 0;
+  background: var(--brand-paper);
+  color: var(--brand-graphite);
+  text-align: center;
+}
+.bed-comparison .section-heading { margin-bottom: clamp(1.4rem, 3vw, 2.4rem); }
+.bed-comparison table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+  margin-bottom: clamp(1.4rem, 3vw, 2.4rem);
+}
+.bed-comparison :is(th, td) {
+  padding: clamp(.9rem, 2vw, 1.6rem);
+  text-align: center;
+  vertical-align: middle;
+}
+.bed-comparison thead { background: var(--brand-graphite); color: var(--brand-porcelain); }
+.bed-comparison thead th:first-child { width: 25%; }
+.bed-comparison tbody tr { border-bottom: 1px solid var(--brand-silver); }
+.bed-comparison .woafy-comparison-row { background: color-mix(in srgb, var(--brand-orange) 10%, var(--brand-porcelain)); }
+.bed-comparison th a { color: inherit; text-decoration: underline; text-underline-offset: .2em; }
+.bed-comparison td { font-size: 1rem; line-height: 1.55; }
+.bed-comparison td span { display: none; }
+
+@media (max-width: 700px) {
+  .bed-comparison table, .bed-comparison tbody { display: block; }
+  .bed-comparison thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+  .bed-comparison tbody tr { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); padding: 1rem .25rem; }
+  .bed-comparison tbody th { grid-column: 1 / -1; padding: 0 .25rem .6rem; }
+  .bed-comparison td { padding: .25rem .55rem; }
+  .bed-comparison td + td { border-inline-start: 1px solid var(--brand-silver); }
+  .bed-comparison td span { display: block; margin-bottom: .25rem; font-size: .875rem; font-weight: 650; }
+}

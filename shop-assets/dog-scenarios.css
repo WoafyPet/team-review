@@ -1,0 +1,30 @@
+#bed-scenarios-title span { display: block; }
+
+#bed-scenarios .bed-routine-layout {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 28px 24px;
+}
+
+#bed-scenarios .scenario-photo-source { display: block; }
+
+#bed-scenarios .bed-routine-layout img {
+  aspect-ratio: 4 / 3;
+  border-radius: 8px;
+  box-shadow: 0 8px 25px rgb(62 43 31 / 9%);
+}
+
+#bed-scenarios .bed-routine-layout h3 {
+  margin: 18px auto 8px;
+  font: 500 clamp(20px, 1.75vw, 25px)/1.2 var(--display);
+}
+
+#bed-scenarios .bed-routine-layout p { max-width: 34ch; }
+
+@media (max-width: 1199px) {
+  #bed-scenarios .bed-routine-layout { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 639px) {
+  #bed-scenarios .bed-routine-layout { grid-template-columns: minmax(0, 1fr); }
+  #bed-scenarios-title span { display: inline; }
+}

@@ -1,0 +1,52 @@
+.bobby-story .story-spread,
+.reserve-layout {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: center;
+  gap: clamp(24px, 5vw, 72px);
+  max-width: 1100px;
+  margin-inline: auto;
+  text-align: center;
+}
+.bobby-story .story-spread { padding-block: clamp(28px, 5vw, 64px); }
+.bobby-story .story-spread figure,
+.story-pair figure,
+.reserve-layout figure { margin: 0; }
+.bobby-story .story-spread img,
+.story-pair img,
+.bobby-story .story-mission img,
+.reserve-layout figure img {
+  width: 100%;
+  display: block;
+  object-fit: contain;
+  border-radius: 10px;
+}
+.bobby-story .story-spread img { max-height: 390px; }
+.bobby-story .story-spread p { margin: 16px auto 0; line-height: 1.65; }
+.story-pair { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: clamp(16px,3vw,32px); max-width: 900px; margin: 24px auto 0; }
+.story-pair img { height: clamp(220px,26vw,340px); background: var(--oat); }
+.story-pair figcaption { text-align: center; margin: 12px auto; }
+.bobby-story .story-mission article { padding: 0 0 12px; border: none; }
+.bobby-story .story-mission article img { height: clamp(170px,19vw,245px); margin-bottom: 20px; }
+.reserve-page { padding: clamp(24px,5vw,68px) clamp(18px,5vw,72px); }
+.reserve-layout figure img { height: auto; max-height: 510px; width: auto; max-width: 100%; margin-inline: auto; }
+.reserve-info h1 { font-size: clamp(36px,4.5vw,66px); line-height: 1.05; text-wrap: balance; }
+.reserve-info { container-type: inline-size; }
+.reserve-info:has(.reserve-offer[hidden]) h1 { font-size: clamp(24px, 8.3cqi, 44px); margin: 0 auto clamp(20px, 2.5vw, 32px); }
+.reserve-offer { max-width: 46ch; margin: 14px auto 22px; line-height: 1.55; }
+.reserve-info .reservation-form { display: flex; flex-direction: column; align-items: stretch; gap: 9px; max-width: 420px; margin: 0 auto; }
+.reserve-info .reservation-form > label:not(.consent) { display: block; position: static; width: auto; height: auto; clip-path: none; clip: auto; overflow: visible; text-align: start; font-weight: 600; }
+.reserve-info .reservation-form input:not([type="checkbox"],[type="hidden"]) { width: 100%; min-height: 48px; margin-bottom: 6px; }
+.reserve-info .consent { display: flex; align-items: flex-start; justify-content: center; gap: 8px; padding: 8px 0; }
+.reserve-info .consent input { flex: none; }
+.reserve-info .button { min-height: 48px; }
+@media(max-width:700px){
+  .bobby-story .story-spread,.reserve-layout { grid-template-columns: minmax(0,1fr); }
+  .reserve-layout figure { order: 2; }
+  .reserve-layout figure img { max-height: 360px; }
+  .bobby-story .story-spread img { max-height: 280px; }
+  .story-pair { grid-template-columns: 1fr; }
+}
+.reserve-info [hidden] { display: none; }
+.base-information { margin: 20px auto 0; padding: 22px; background: var(--oat); border-radius: 10px; }
+.base-information p { margin: 14px auto; line-height: 1.6; }

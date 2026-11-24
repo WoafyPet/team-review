@@ -1,0 +1,135 @@
+/* Keep the garden landscape natural. Give the controls the same finish as the site. */
+.garden-page {
+  --garden-ink: var(--brand-graphite);
+  --garden-paper: var(--brand-porcelain);
+  --garden-clay: var(--brand-cognac);
+  --garden-line: color-mix(in srgb, var(--brand-silver) 60%, var(--garden-paper));
+  --garden-panel: color-mix(in srgb, var(--garden-paper) 48%, white);
+  background: var(--garden-paper);
+  color: var(--garden-ink);
+}
+
+.garden-page :is(.garden-map, .garden-visit, .garden-dialog, .garden-visit-bar) {
+  border-color: var(--garden-line);
+}
+
+.garden-page :is(.garden-visit, .garden-station, .garden-wall, .garden-dialog, [data-community-book]) {
+  color: var(--garden-ink);
+  background: var(--garden-panel);
+}
+
+.garden-page .garden-visit-bar {
+  color: var(--garden-ink);
+  background: var(--garden-paper);
+}
+
+.garden-page .garden-intro .garden-destinations a,
+.garden-page .garden-pins a,
+.garden-page .garden-map-controls,
+.garden-page .garden-avatar :is(summary, form, .garden-meeting-panel),
+.garden-page .garden-scene-tools :is(summary, strong, button, [data-object-options]),
+.garden-page .garden-visit-bar [data-back],
+.garden-page .garden-memory-actions button {
+  color: var(--garden-ink);
+  background: var(--garden-panel);
+  border-color: var(--garden-line);
+}
+
+.garden-page .garden-pins a .garden-pin-mark,
+.garden-page .garden-pins a[data-place="memories"] .garden-pin-mark {
+  background: var(--brand-orange);
+}
+
+.garden-page .garden-pins a[data-place="memories"],
+.garden-page :is(.garden-map-status, .garden-noscript) {
+  color: var(--garden-paper);
+  background: var(--garden-ink);
+  border-color: var(--garden-ink);
+}
+
+.garden-page .garden-pins a:is(:hover, :focus-visible, [aria-current="location"]),
+.garden-page .garden-intro .garden-destinations a:is(:hover, :focus-visible),
+.garden-page .garden-map .garden-avatar[open] > summary {
+  color: var(--garden-paper);
+  background: var(--brand-cobalt);
+  border-color: var(--brand-cobalt);
+}
+
+.garden-page .garden-map-controls button,
+.garden-page .garden-avatar,
+.garden-page .garden-station :is(h2, h3, h4, summary),
+.garden-page .garden-map .garden-meeting-panel > p,
+.garden-page .garden-station .circle-question-form label > span,
+.garden-page [data-community-book] .shared-memory-card {
+  color: var(--garden-ink);
+}
+
+.garden-page .garden-avatar summary::before,
+.garden-page .garden-private,
+.garden-page .garden-station .station-fold[open] > summary,
+.garden-page .cabinet-initial {
+  color: var(--brand-cognac);
+}
+
+.garden-page .garden-map-controls button:hover,
+.garden-page .garden-scene-tools [data-object-options] button:is(:hover, :focus-visible),
+.garden-page .garden-visit-bar [data-back]:hover,
+.garden-page .garden-memory-actions button:hover,
+.garden-page [data-community-book] .shared-memory-card:hover {
+  background: var(--garden-paper);
+}
+
+.garden-page .garden-station :is(a, .circle-reply-button),
+.garden-page .garden-live {
+  color: var(--brand-cobalt);
+}
+
+.garden-page .garden-station :is(fieldset, .circle-thread, .station-fold, .circle-attachment),
+.garden-page [data-community-book] :is(details, li) {
+  border-color: var(--garden-line);
+}
+
+.garden-page .cabinet-list .pet-cabinet,
+.garden-page .garden-station .circle-community :is(.circle-thread, [data-circle-compose]),
+.garden-page [data-community-book] blockquote {
+  color: var(--garden-ink);
+  border-color: var(--garden-line);
+  background: var(--garden-paper);
+}
+
+.garden-page .garden-station :is(input:not([type=checkbox], [type=radio], [type=file]), select, textarea),
+.garden-page .garden-avatar select,
+.garden-page .garden-dialog :is(input:not([type=checkbox], [type=file]), textarea),
+.garden-page [data-community-book] :is(select, textarea, input:not([type=checkbox])) {
+  color: var(--garden-ink);
+  background: var(--garden-panel);
+  border-color: var(--brand-cognac);
+}
+
+.garden-page :is(.garden-station, .garden-avatar) input:is([type=checkbox], [type=radio]) {
+  accent-color: var(--brand-cobalt);
+}
+
+.garden-page .garden-station :is(button[type=submit], .primary, .circle-question-result button),
+.garden-page .garden-avatar button,
+.garden-page .button.primary {
+  color: var(--brand-button-ink);
+  background: var(--brand-orange);
+  border-color: transparent;
+}
+
+.garden-page .garden-station :is(button[type=submit], .primary, .circle-question-result button):hover,
+.garden-page .garden-avatar button:hover,
+.garden-page .button.primary:hover {
+  color: var(--garden-paper);
+  background: var(--garden-ink);
+}
+
+.garden-page .garden-main :is(a, button, summary, input, select, textarea, canvas):focus-visible,
+.garden-page .garden-dialog :focus-visible {
+  outline: 2px solid var(--brand-cobalt);
+  outline-offset: 2px;
+}
+.garden-page .garden-map-controls button:focus-visible {
+  outline-offset: -3px;
+}

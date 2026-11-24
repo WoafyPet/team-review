@@ -1,0 +1,270 @@
+/* The combined site's editorial system, scoped to imported WoafMeow pages. */
+html body.legacy-page {
+  --ivory:var(--canvas); --paper:var(--oat); --forest:var(--ink); --forest-2:var(--muted);
+  --clay:var(--orange); --clay-dark:#934521; --sage:var(--canvas); --rose:#e5d7c3;
+  --serif:var(--display); --sans:var(--font); --radius:10px; --shadow:none;
+  background:var(--canvas); color:var(--ink); font:17px/1.65 var(--font);
+}
+html body.legacy-page[class] main {min-width:0; background:var(--canvas); color:var(--ink)}
+html body.legacy-page[class] main :is(h1,h2) {
+  color:var(--ink)!important; text-align:center!important; font-family:var(--display)!important; font-weight:400!important;
+  letter-spacing:-.025em!important; line-height:1.13!important; text-wrap:balance;
+}
+html body.legacy-page[class] main h1 {font-size:clamp(40px,4.6vw,64px)!important; max-width:1000px}
+html body.legacy-page[class] main h2 {font-size:clamp(30px,3.3vw,44px)!important}
+html body.legacy-page[class] main h3 {text-align:center!important; font:600 21px/1.35 var(--font)!important; color:var(--ink)!important; letter-spacing:-.02em}
+html body.legacy-page[class] main p {text-align:center!important}
+html body.legacy-page[class] main :is(p,li,dd) {color:var(--muted)!important; line-height:1.7}
+html body.legacy-page[class] main :is(span,strong,small,dt,label,legend,output,b,em) {color:var(--ink)!important}
+html body.legacy-page[class] main a:not(.button) {color:var(--accent)!important}
+html body.legacy-page[class] main :is(button,.button) :is(span,strong,small,b,em) {color:inherit!important}
+html body.legacy-page[class] main :is(p,li,label,dd,input,textarea,select) {font-family:var(--font)!important; font-size:17px}
+html body.legacy-page[class] main :is(section,article,aside,form,div) {border-color:var(--line)}
+html body.legacy-page[class] main :is(img,picture,figure,section,article,aside,form,fieldset) {min-width:0; max-width:100%}
+html body.legacy-page[class] main img {border-radius:10px}
+html body.legacy-page[class] main :is(figure,.lesson-chapter-layout>figure,.practice-band-v6 figure,.health-hero>figure) {background:var(--sand)!important}
+html body.legacy-page[class] main :is(.wm-wrap,.wrap) {width:min(1280px,calc(100% - 80px)); margin-inline:auto}
+html body.legacy-page[class] main section {background:transparent!important; box-shadow:none!important}
+html body.legacy-page[class] main :is(article,aside,form,fieldset,details) {background:var(--oat)!important; box-shadow:none!important}
+html body.legacy-page[class] main :is(.account-scene-media,.account-scene-panel,.health-hero-copy,.health-gate,.health-empty,.circle-account-gate,.circle-question-result,.public-pet-profile,.lesson-personal-context,.chapter-result,.chapter-quiz,.contact-direct>div,.guide-hero-copy,.guide-vet-note>div) {background:var(--oat)!important; color:var(--ink)!important}
+html body.legacy-page[class] main :is(.health-summary-grid>div,.health-insight-grid>div,.directory-credibility>*,.directory-types>button,.circle-filter-bar button,.circle-public-card dl>div,.lesson-visibility label,.condition-picker>div>label) {background:var(--sand)!important; color:var(--ink)!important}
+html body.legacy-page[class] main :is(.editorial-heading,.section-heading,.directory-hero-heading) {text-align:center; max-width:1000px; margin-inline:auto}
+html body.legacy-page[class] main :is(.editorial-heading,.section-heading,.directory-hero-heading) > p {max-width:740px; margin:18px auto 0}
+html body.legacy-page[class] main :is(.eyebrow,.kicker) {color:var(--muted)!important; letter-spacing:.05em; font-size:14px}
+
+/* Clear, accessible controls retain all original form hooks. */
+html body.legacy-page[class] :is(main,dialog) .button,
+html body.legacy-page[class] main button[type=submit] {
+  min-height:52px!important; padding:14px 24px!important; border:1px solid var(--orange)!important;
+  border-radius:6px!important; background:var(--orange)!important; color:#fff4e4!important;
+  font:650 16px/1.4 var(--font)!important; box-shadow:none!important; text-align:center;
+}
+html body.legacy-page[class] :is(main,dialog) .button.secondary {background:#795039!important; border-color:#795039!important; color:#fff4e4!important}
+html body.legacy-page[class] main :is(.button:hover,button[type=submit]:hover) {background:#93451e!important; border-color:#93451e!important}
+html body.legacy-page[class] main :is(input:not([type=checkbox]):not([type=radio]):not([type=hidden]),textarea,select) {
+  min-height:52px; width:100%; max-width:100%; padding:13px 15px!important; border:1px solid #a48b71!important;
+  border-radius:8px!important; background:#f7ecdc!important; color:var(--ink)!important; box-shadow:none!important;
+}
+html body.legacy-page[class] main textarea {min-height:130px; resize:vertical}
+html body.legacy-page[class] main :is(input:not([type=checkbox],[type=radio]),textarea,select) {text-align:left!important}
+html body.legacy-page[class] main :is(.guide-vet-trust>.wm-wrap>header,.directory-hero-heading,[data-directory-profile]) {text-align:center!important}
+html body.legacy-page[class] .guide-hero-copy .email-capture {padding:0; border:0; background:transparent!important}
+html body.legacy-page[class] .guide-hero-copy .email-capture>.button {padding-inline:16px!important; gap:12px; white-space:nowrap}
+html body.legacy-page[class] main :is(input[type=checkbox],input[type=radio]) {width:22px; height:22px; flex-shrink:0; accent-color:var(--orange)}
+html body.legacy-page[class] main label {color:var(--ink); font-weight:500}
+html body.legacy-page[class] main :is(.form-note,.field-note) {font-size:15px!important; line-height:1.6; color:var(--muted)!important}
+html body.legacy-page[class] main ::placeholder {color:#786655; opacity:1}
+html body.legacy-page[class] main :is(.text-link,.back-link,.text-button) {color:var(--accent)!important; font:600 16px/1.5 var(--font); text-underline-offset:4px}
+html body.legacy-page[class] main :is(a,button,input,select,textarea,summary):focus-visible {outline:2px solid var(--accent); outline-offset:4px}
+html body.legacy-page[class] main :is(.circle-question-form,.account-form-v8,.provider-form-v6,.match-form-v6,.preview-form,.health-form-card) {
+  background:var(--oat)!important; border-radius:10px!important; border-color:var(--line)!important; box-shadow:none!important;
+}
+html body.legacy-page[class] dialog {max-width:min(760px,calc(100% - 32px)); padding:30px; background:var(--oat); color:var(--ink); border:1px solid var(--line); border-radius:10px}
+html body.legacy-page[class] dialog::backdrop {background:#29251f80}
+
+/* Questions lead into a calm, image-led library. */
+html body.legacy-page[class] .circle-hero-v7 {
+  width:min(1280px,calc(100% - 80px))!important; margin:36px auto!important;
+  grid-template-columns:1.08fr 1fr!important; gap:0!important; background:var(--oat)!important;
+  border:0!important; border-radius:4px!important; overflow:hidden; box-shadow:none!important;
+}
+html body.legacy-page[class] .circle-hero-v7 > div {padding:44px 38px!important; text-align:center}
+html body.legacy-page[class] .circle-hero-v7 > div > p {max-width:560px; margin:20px auto 24px; color:var(--muted)!important}
+html body.legacy-page[class] .circle-hero-v7 > figure {height:100%!important; min-height:440px!important; border-radius:0!important}
+html body.legacy-page[class] .circle-hero-v7 > figure img {height:100%!important; width:100%; object-fit:cover; border-radius:0}
+html body.legacy-page[class] .circle-hero-question {padding:0!important; border:0!important; text-align:left}
+html body.legacy-page[class] :is(.circle-feed-v7,.lesson-chapters-v7) {padding-block:50px!important; background:transparent!important}
+html body.legacy-page[class] .circle-public-grid {display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); align-items:stretch; gap:24px 28px!important}
+html body.legacy-page[class] .circle-public-card {display:grid!important; grid-template-columns:minmax(0,1fr)!important; grid-template-rows:subgrid!important; grid-row:span 5; gap:0; background:transparent!important; border:0!important; border-radius:0!important; box-shadow:none!important; overflow:hidden}
+html body.legacy-page[class] .circle-public-card[hidden] {display:none!important}
+html body.legacy-page[class] .circle-public-card > figure {grid-column:1/-1; grid-row:1; width:100%!important; height:auto!important; min-height:0!important; aspect-ratio:1.6!important; background:var(--sand)!important}
+html body.legacy-page[class] .circle-public-card > div {display:grid!important; grid-template-columns:minmax(0,1fr)!important; grid-column:1/-1; grid-template-rows:subgrid!important; grid-row:2 / span 4; gap:18px; padding:0 0 12px!important}
+html body.legacy-page[class] .circle-public-card figure img {width:100%; height:100%!important; aspect-ratio:1.6; object-fit:cover!important}
+html body.legacy-page[class] .circle-public-card h2 {font:600 21px/1.4 var(--font)!important; text-wrap:pretty}
+html body.legacy-page[class] .circle-public-card :is(h2,dl,p) {margin:0!important}
+html body.legacy-page[class] .circle-public-card dl {display:grid; gap:12px; padding:16px; background:var(--sand); border-radius:4px}
+html body.legacy-page[class] .circle-public-card dl > div {padding:0; border:0!important; background:transparent!important}
+html body.legacy-page[class] .circle-public-card dt {text-transform:none!important; letter-spacing:0!important; font-weight:600}
+html body.legacy-page[class] .circle-public-card :is(p,dt,dd) {font-size:16px!important}
+html body.legacy-page[class] .circle-public-card .button {align-self:end; margin-top:0!important}
+html body.legacy-page[class] :is(.circle-filters,.directory-types) {display:flex; flex-wrap:wrap; justify-content:center; gap:10px; padding-block:20px}
+html body.legacy-page[class] :is(.circle-filters,.directory-types) button {min-height:44px; padding:10px 16px; border:1px solid var(--line); border-radius:4px; background:var(--oat); color:var(--ink); font-size:16px; white-space:nowrap}
+html body.legacy-page[class] main button[aria-pressed=true] {background:#795039!important; color:#fff4e4!important; border-color:#795039!important}
+html body.legacy-page[class] main .circle-question-form .lesson-visibility {
+  display:grid!important; grid-template-columns:repeat(2,minmax(0,1fr))!important; gap:10px!important;
+  width:min(560px,100%); margin:8px 0!important; padding:0!important; border:0!important; border-radius:0!important; background:transparent!important;
+}
+html body.legacy-page[class] main .circle-question-form .lesson-visibility legend {margin:0 0 12px!important; padding:0!important; font:600 16px/1.4 var(--font)!important}
+html body.legacy-page[class] main .circle-question-form .lesson-visibility label {
+  display:flex!important; align-items:center!important; gap:10px!important; height:56px!important; min-height:56px!important; margin:0!important;
+  padding:12px 14px!important; border:1px solid var(--line)!important; border-radius:4px!important; background:var(--oat)!important;
+}
+html body.legacy-page[class] main .circle-question-form .lesson-visibility label:has(input:checked) {background:var(--sand)!important; border-color:#795039!important}
+html body.legacy-page[class] main .circle-question-form .lesson-visibility input {position:static!important; width:18px!important; height:18px!important; margin:0!important; transform:none!important}
+html body.legacy-page[class] main .circle-question-form .lesson-visibility label > span {margin:0!important; line-height:1.4!important}
+html body.legacy-page[class] main .circle-question-form .lesson-visibility label strong {margin:0!important; font:600 15px/1.4 var(--font)!important}
+html body.legacy-page[class] main .circle-question-form .lesson-visibility label small {margin:4px 0 0!important; font:400 14px/1.5 var(--font)!important}
+
+/* Longer lessons keep a comfortable reading measure. */
+html body.legacy-page[class] .lesson-hero-v7 {background:var(--oat)!important; padding-block:40px!important}
+html body.legacy-page[class] .lesson-hero-v7 h1 {text-align:center; margin-inline:auto; max-width:1000px}
+html body.legacy-page[class] .lesson-hero-v7 > div > p {text-align:center; max-width:780px; margin-inline:auto}
+html body.legacy-page[class] .public-pet-profile {background:var(--sand)!important; color:var(--ink)!important; border:0!important; border-radius:4px!important; box-shadow:none!important}
+html body.legacy-page[class] .lesson-chapters-v7 > section {background:transparent!important; padding-block:44px!important; border-top:1px solid var(--line)}
+html body.legacy-page[class] .lesson-chapter-layout {gap:42px!important; grid-template-columns:minmax(0,1fr) minmax(0,1fr)!important}
+html body.legacy-page[class] .lesson-chapter-layout > figure img {width:100%; height:auto!important; aspect-ratio:1.25; object-fit:cover}
+html body.legacy-page[class] :is(.chapter-result,.chapter-quiz,.lesson-personal-context,.lesson-owner-actions) {background:var(--oat)!important; color:var(--ink)!important; border-radius:4px!important; border-color:var(--line)!important; box-shadow:none!important}
+html body.legacy-page[class] :is(.chapter-result,.chapter-quiz) {padding:22px!important; margin-block:24px!important}
+html body.legacy-page[class] :is(.lesson-triage-v9,.guide-triage-first,.health-triage-first,.emergency-strip-v6,.call-sooner-v7) {
+  background:#dfc4a7!important; color:var(--ink)!important; border-block:1px solid #aa7756!important;
+}
+html body.legacy-page[class] :is(.lesson-triage-v9,.guide-triage-first,.health-triage-first,.emergency-strip-v6,.call-sooner-v7) :is(p,span,strong,a) {color:var(--ink)!important}
+html body.legacy-page[class] :is(.lesson-triage-v9,.guide-triage-first) .button {background:var(--orange)!important; color:#fff4e4!important}
+
+/* Directory results remain compact, searchable and clearly separated. */
+html body.legacy-page[class] .directory-hero-v6 {width:min(1280px,calc(100% - 80px))!important; margin:36px auto!important; padding:0!important; background:transparent!important; gap:28px!important}
+html body.legacy-page[class] .directory-hero-v6 .directory-hero-heading {grid-column:1/-1; text-align:center!important; width:100%; max-width:1000px; padding-top:16px}
+html body.legacy-page[class] .directory-hero-v6 .directory-hero-heading h1 {margin-inline:auto; max-width:1000px}
+html body.legacy-page[class] .directory-selectors {background:var(--oat)!important; padding:28px!important; border:0!important; border-radius:4px!important; box-shadow:none!important}
+html body.legacy-page[class] .directory-results-v6 {background:transparent!important; padding-block:40px!important}
+html body.legacy-page[class] .provider-grid-v6 {align-items:stretch!important; gap:18px!important}
+html body.legacy-page[class] .provider-card-v6 {display:grid!important; grid-template-rows:subgrid!important; grid-row:span 9; gap:0!important; background:var(--oat)!important; border:0!important; border-radius:4px!important; box-shadow:none!important}
+html body.legacy-page[class] .provider-card-v6[hidden] {display:none!important}
+html body.legacy-page[class] .provider-card-v6 > figure {grid-row:1; background:var(--sand)!important}
+html body.legacy-page[class] .provider-card-v6 > div:last-child {display:grid!important; grid-template-rows:subgrid!important; grid-row:2 / span 8; gap:12px!important; padding:24px!important}
+html body.legacy-page[class] main .provider-card-v6.no-photo::before {content:attr(data-organization); display:grid!important; grid-row:1; place-items:center; min-height:176px; padding:30px; background:var(--sand)!important; color:var(--ink)!important; font:400 26px/1.3 var(--display); text-align:center}
+html body.legacy-page[class] .provider-card-v6 :is(h3,p,.organization,.location,.provider-contact,.provider-summary,.provider-fit,.provider-checked) {color:var(--ink)!important; font-family:var(--font)!important}
+html body.legacy-page[class] .provider-card-v6 :is(.organization,.location,.provider-contact,.provider-summary,.provider-fit) {font-size:16px!important; line-height:1.65!important}
+html body.legacy-page[class] .provider-card-v6 :is(h3,p) {margin:0!important; max-height:none!important; overflow:visible!important; display:block!important; -webkit-line-clamp:unset!important}
+html body.legacy-page[class] .provider-card-v6 .provider-source-type {align-self:start; width:fit-content; margin:0!important; padding:0!important; background:transparent!important; color:var(--muted)!important; font:600 13px/1.5 var(--font)!important; letter-spacing:.04em!important}
+html body.legacy-page[class] .provider-card-v6 .provider-fit {padding:16px!important; border:0!important; background:var(--sand)!important; border-radius:3px!important}
+html body.legacy-page[class] .provider-card-v6 .provider-fit strong {color:var(--ink)!important; font-size:16px!important}
+html body.legacy-page[class] .provider-card-v6 .provider-checked {display:none!important}
+html body.legacy-page[class] .provider-card-v6 > div:last-child > a:last-child {align-self:end; margin:4px 0 0!important; color:var(--accent)!important; font-size:16px!important}
+html body.legacy-page[class] :is(.directory-note-v6,.practice-band-v6) {background:var(--sand)!important; color:var(--ink)!important}
+
+/* Account, care records, support and legal pages share the same surfaces. */
+html body.legacy-page[class] .account-scene-v8 {display:block!important; width:min(1120px,calc(100% - 80px)); margin:36px auto; background:var(--oat)!important; border:0!important; border-radius:4px!important; box-shadow:none!important}
+html body.legacy-page[class] .account-scene-media {display:grid!important; grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr)!important; align-items:center; gap:0!important; background:var(--sand)!important}
+html body.legacy-page[class] .account-scene-media > figure {height:440px!important; overflow:hidden; margin:0!important}
+html body.legacy-page[class] .account-scene-media > figure :is(picture,img) {height:100%!important; width:100%!important; object-fit:cover!important; object-position:center 42%!important}
+html body.legacy-page[class] .account-scene-media > div {padding:38px!important}
+html body.legacy-page[class] main .account-scene-media h1 {max-width:570px!important; margin:0 0 20px!important; font-size:clamp(34px,3.7vw,48px)!important; text-align:center}
+html body.legacy-page[class] .account-scene-media p {margin:0 auto 22px!important; text-align:center}
+html body.legacy-page[class] .account-scene-media ol {display:grid; gap:8px; width:fit-content; margin:0 auto!important; padding-left:22px}
+html body.legacy-page[class] .account-scene-panel {padding:38px!important}
+html body.legacy-page[class] .account-form-v8 > header {margin-bottom:26px; text-align:center}
+html body.legacy-page[class] .account-form-v8 fieldset {padding:22px!important; margin-bottom:22px!important; border:1px solid var(--line)!important; border-radius:4px!important}
+html body.legacy-page[class] .condition-picker > div {display:grid!important; grid-template-columns:repeat(3,minmax(0,1fr))!important; gap:8px!important}
+html body.legacy-page[class] .condition-picker > div > label {display:flex!important; align-items:center!important; gap:10px!important; min-height:58px!important; margin:0!important; padding:12px!important; border:1px solid var(--line)!important; border-radius:4px!important; background:var(--oat)!important}
+html body.legacy-page[class] .condition-picker > div > label:has(input:checked) {background:var(--sand)!important; border-color:#795039!important}
+html body.legacy-page[class] main .condition-picker > div input {width:18px!important; height:18px!important; margin:0!important}
+html body.legacy-page[class] main .condition-picker > div span {font:500 15px/1.45 var(--font)!important}
+html body.legacy-page[class] :is(.account-current-v7,.account-private-lessons,.account-email-login,.health-share,.health-insights,.health-timeline-item) {background:var(--oat)!important; color:var(--ink)!important; border:1px solid var(--line)!important; border-radius:4px!important; box-shadow:none!important}
+html body.legacy-page[class] .account-email-login {padding:24px; margin-bottom:24px}
+html body.legacy-page[class] .account-email-login h2 {margin-bottom:20px}
+html body.legacy-page[class] .account-email-login button {margin-top:18px}
+html body.legacy-page[class] :is(.health-shell,.legal-content) {width:min(1120px,calc(100% - 80px)); margin:40px auto}
+html body.legacy-page[class] .health-hero {text-align:center!important; background:transparent!important}
+html body.legacy-page[class] .health-tools {gap:26px}
+html body.legacy-page[class] :is(.health-form-card,.health-share,.health-insights) {padding:26px!important}
+html body.legacy-page[class] .legal-content {max-width:860px}
+html body.legacy-page[class] .legal-content :is(h1,h2) {margin-block:26px 18px}
+html body.legacy-page[class] .legal-content p {margin-block:16px}
+html body.legacy-page[class] :is(.loss-hero-v6,.contact-direct,.account-required-hero) {background:var(--oat)!important; color:var(--ink)!important}
+html body.legacy-page[class] :is(.loss-hero-v6,.account-required-hero) h1 {margin-inline:auto; text-align:center}
+html body.legacy-page[class] .loss-hero-v6 {display:grid!important; grid-template-columns:minmax(0,1fr) minmax(0,1fr)!important; align-items:stretch!important; gap:0!important; width:min(1280px,calc(100% - 80px))!important; margin:36px auto!important; overflow:hidden; border-radius:4px}
+html body.legacy-page[class] .loss-hero-v6 > div {align-content:center; padding:44px!important; text-align:center}
+html body.legacy-page[class] .loss-hero-v6 p {max-width:580px; margin:22px auto 28px!important}
+html body.legacy-page[class] .loss-hero-v6 > figure {min-height:440px; height:100%; margin:0!important}
+html body.legacy-page[class] .loss-hero-v6 > figure img {width:100%!important; height:100%!important; max-height:none!important; object-fit:cover!important; border-radius:0!important}
+html body.legacy-page[class] :is(.loss-choose,.loss-journey,.loss-first-days,.loss-goodbye-detail,.loss-words,.loss-support-v6) {padding-block:54px!important}
+html body.legacy-page[class] :is(.loss-choose,.loss-journey,.loss-first-days,.loss-goodbye-detail) header {max-width:900px!important; margin:0 auto 30px!important; text-align:center}
+html body.legacy-page[class] .loss-choose a {align-items:center; justify-content:space-between; padding:28px!important; background:var(--oat)!important; text-align:center}
+html body.legacy-page[class] .loss-choose strong {font:600 21px/1.4 var(--font)!important}
+html body.legacy-page[class] .loss-journey article {grid-template-columns:32px minmax(0,1fr)!important; padding:28px!important}
+html body.legacy-page[class] main :is(.loss-journey article,.loss-support-v6 article) h2 {margin:0 0 14px!important; font:600 23px/1.35 var(--font)!important; text-align:center}
+html body.legacy-page[class] :is(.loss-first-days article,.loss-goodbye-detail article,.loss-support-v6 article) {border:0!important; border-radius:4px!important; background:var(--oat)!important}
+html body.legacy-page[class] .loss-goodbye-detail .wm-wrap > div {gap:22px!important}
+html body.legacy-page[class] .loss-goodbye-detail article {padding:26px!important}
+html body.legacy-page[class] .loss-goodbye-detail figure {margin:30px 0 0!important; max-height:480px; overflow:hidden}
+html body.legacy-page[class] .loss-goodbye-detail figure img {max-height:480px!important; width:100%; object-fit:cover!important}
+html body.legacy-page[class] .loss-first-days article {display:flex!important; flex-direction:column; padding:0 0 22px!important; overflow:hidden}
+html body.legacy-page[class] .loss-first-days article :is(h3,p,a) {margin:18px 22px 0!important}
+html body.legacy-page[class] .loss-first-days article a {margin-top:auto!important; padding-top:18px}
+html body.legacy-page[class] .loss-words .image-text {align-items:center; gap:42px!important}
+html body.legacy-page[class] .loss-call-script {background:var(--oat)!important; border-color:var(--line)!important; padding:24px!important}
+html body.legacy-page[class] .loss-support-v6 article {display:flex; flex-direction:column; padding:28px!important}
+html body.legacy-page[class] .loss-support-v6 article a {margin-top:auto; padding-top:20px}
+html body.legacy-page[class] main table {width:100%; border-collapse:collapse; font-size:16px}
+html body.legacy-page[class] main :is(th,td) {padding:14px; border-bottom:1px solid var(--line); text-align:left}
+html body.legacy-page[class] main :is(.table-wrap,.table-scroll) {max-width:100%; overflow-x:auto}
+
+@media(max-width:1000px) {
+  html body.legacy-page[class] main :is(.wm-wrap,.wrap) {width:calc(100% - 48px)}
+  html body.legacy-page[class] .circle-public-grid {grid-template-columns:repeat(2,minmax(0,1fr))}
+  html body.legacy-page[class] .circle-hero-v7 {width:calc(100% - 48px)!important}
+  html body.legacy-page[class] .circle-hero-v7 > div {padding:32px 25px!important}
+  html body.legacy-page[class] .lesson-chapter-layout {gap:28px!important}
+  html body.legacy-page[class] .loss-hero-v6 {width:calc(100% - 48px)!important}
+  html body.legacy-page[class] .loss-hero-v6 > div {padding:30px!important}
+  html body.legacy-page[class] .account-scene-v8 {width:calc(100% - 48px)!important}
+  html body.legacy-page[class] .account-scene-media > div {padding:28px!important}
+}
+@media(max-width:700px) {
+  html body.legacy-page {font-size:16px}
+  html body.legacy-page[class] main :is(.wm-wrap,.wrap) {width:calc(100% - 32px)}
+  html body.legacy-page[class] main h1 {font-size:38px!important; line-height:1.1!important}
+  html body.legacy-page[class] main h2 {font-size:31px!important}
+  html body.legacy-page[class] main h3 {font-size:20px!important}
+  html body.legacy-page[class] main :is(p,li,label,dd,input,textarea,select) {font-size:16px!important}
+  html body.legacy-page[class] :is(main,dialog) .button {font-size:16px!important; max-width:100%; white-space:normal}
+  html body.legacy-page[class] :is(.circle-hero-v7,.directory-hero-v6,.account-scene-v8) {width:calc(100% - 32px)!important; margin:24px auto!important; grid-template-columns:1fr!important}
+  html body.legacy-page[class] .circle-hero-v7 > div {padding:29px 20px!important}
+  html body.legacy-page[class] .circle-hero-v7 > figure {height:280px!important; min-height:0!important}
+  html body.legacy-page[class] .circle-public-grid {grid-template-columns:1fr!important; gap:32px}
+  html body.legacy-page[class] .circle-public-card {grid-row:auto; grid-template-rows:auto auto!important}
+  html body.legacy-page[class] .circle-public-card > div {grid-row:2; grid-template-rows:none!important; padding-top:18px!important}
+  html body.legacy-page[class] .circle-public-card h2 {font-size:21px!important}
+  html body.legacy-page[class] .circle-public-card > div {gap:16px}
+  html body.legacy-page[class] .circle-filter-bar > div {display:flex!important; flex-wrap:nowrap!important; justify-content:flex-start!important; width:100%; max-width:100%; min-width:0; overflow-x:auto; gap:8px; padding-block:8px 12px}
+  html body.legacy-page[class] .circle-filter-bar button {width:auto!important; flex:0 0 auto; white-space:nowrap}
+  html body.legacy-page[class] :is(.circle-feed-v7,.lesson-chapters-v7) {padding-block:28px!important}
+  html body.legacy-page[class] .lesson-chapter-layout {grid-template-columns:1fr!important; gap:25px!important}
+  html body.legacy-page[class] .lesson-chapter-layout > figure img {aspect-ratio:1.45!important; max-height:330px}
+  html body.legacy-page[class] .lesson-chapters-v7 > section {padding-block:30px!important}
+  html body.legacy-page[class] :is(.lesson-triage-v9,.guide-triage-first) .wm-wrap {grid-template-columns:1fr!important; gap:14px!important}
+  html body.legacy-page[class] .directory-selectors {padding:21px!important}
+  html body.legacy-page[class] .provider-card-v6 > div:last-child {padding:22px!important}
+  html body.legacy-page[class] .account-scene-media {grid-template-columns:1fr!important}
+  html body.legacy-page[class] .account-scene-media > figure {height:280px!important}
+  html body.legacy-page[class] .account-scene-media > div {padding:28px 22px!important}
+  html body.legacy-page[class] .account-scene-panel {padding:26px 20px!important}
+  html body.legacy-page[class] .account-form-v8 fieldset {padding:16px!important}
+  html body.legacy-page[class] .condition-picker > div {grid-template-columns:repeat(2,minmax(0,1fr))!important}
+  html body.legacy-page[class] .condition-picker > div > label {min-height:64px!important; padding:10px!important; gap:8px!important}
+  html body.legacy-page[class] main .condition-picker > div span {font-size:14px!important}
+  html body.legacy-page[class] .loss-hero-v6 {width:calc(100% - 32px)!important; margin:24px auto!important; grid-template-columns:1fr!important}
+  html body.legacy-page[class] .loss-hero-v6 > div {padding:30px 22px!important}
+  html body.legacy-page[class] .loss-hero-v6 > figure {min-height:0!important; height:280px!important}
+  html body.legacy-page[class] :is(.loss-choose,.loss-journey,.loss-first-days,.loss-goodbye-detail,.loss-words,.loss-support-v6) {padding-block:34px!important}
+  html body.legacy-page[class] :is(.loss-choose,.loss-journey,.loss-first-days,.loss-goodbye-detail) header {margin-bottom:24px!important}
+  html body.legacy-page[class] .loss-journey article {padding:22px!important; gap:12px!important}
+  html body.legacy-page[class] .loss-words .image-text {grid-template-columns:1fr!important; gap:26px!important}
+  html body.legacy-page[class] :is(.health-shell,.legal-content) {width:calc(100% - 32px); margin:28px auto}
+  html body.legacy-page[class] :is(.health-tools,.health-share,.provider-form-v6 > div) {grid-template-columns:1fr!important}
+  html body.legacy-page[class] :is(.health-form-card,.health-share,.health-insights) {padding:21px!important}
+  html body.legacy-page[class] main :is(.health-form-card,.account-current-v7,.provider-card-v6) {min-width:0!important; max-width:100%!important}
+  html body.legacy-page[class] main fieldset {padding-inline:0; margin-inline:0}
+  html body.legacy-page[class] main :is(.circle-filters,.directory-types) {justify-content:flex-start; flex-wrap:nowrap; overflow-x:auto; padding-bottom:12px}
+}
+html body.legacy-page[class] main :is(.circle-intro-v10>span,.circle-question-form>header>span,.directory-hero-heading>span,.guide-hero-copy>.eyebrow){display:none!important}
+
+/* Actions keep their contrast even inside triage and reassurance panels. */
+html body.legacy-page[class] main a.button,html body.legacy-page[class] main button.button{color:#fff4e4!important}
+html body.legacy-page[class] main .button :is(span,strong,small,b,em){color:inherit!important}
+html body.legacy-page[class] :is(.guide-mobile-triage,.lesson-mobile-triage){background:var(--sand)!important;color:var(--ink)!important;border:1px solid #a6633f!important}
+html body.legacy-page[class] :is(.guide-mobile-triage,.lesson-mobile-triage) :is(strong,span){color:var(--ink)!important}
+html body.legacy-page[class] .emergency-strip-v6 button{background:var(--oat)!important;color:var(--ink)!important;border-color:var(--line)!important}
+html body.legacy-page[class] :is(.practice-band-v6,.guide-method)>.wm-wrap{background:var(--oat)!important}
+html body.legacy-page[class] main :is(.question-image-field,.checkout-confirm){background:var(--oat)!important;color:var(--ink)!important}

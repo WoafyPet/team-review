@@ -1,0 +1,41 @@
+[data-wall][data-public-open]>:not([data-community-book]){display:none}
+[data-community-book]{color:#42372e;text-align:center}
+[data-community-book] h3{margin:1rem 0;font-size:1.6rem}
+[data-community-book] form,[data-community-book] label{display:grid;gap:.55rem}
+[data-community-book] form{margin-block:1rem;gap:.9rem}
+[data-community-book] input,[data-community-book] select,[data-community-book] textarea{font:inherit;box-sizing:border-box;width:100%;padding:.65rem;border:1px solid #c7b9a5;border-radius:.65rem;background:#fffaf2;color:inherit}
+[data-community-book] .community-check{display:flex;align-items:flex-start;text-align:start;font-size:.88rem;line-height:1.4}
+[data-community-book] .community-check input{width:1.15rem;height:1.15rem;flex:none}
+[data-community-book] blockquote{margin:.65rem 0;padding:.8rem;background:#fff8e9;border-radius:.75rem;overflow-wrap:anywhere;white-space:pre-line}
+.community-controls,.community-gifts{display:flex;justify-content:center;flex-wrap:wrap;gap:.4rem}
+.community-list{list-style:none;padding:0;display:grid;gap:.4rem}
+[data-community-book] details{margin:.65rem 0;padding:.65rem;border:1px solid #d8cbb8;border-radius:.6rem}
+[data-community-book] button{max-width:100%;overflow-wrap:anywhere}
+[data-community-book] [role=status]{min-height:1.2em;font-size:.88rem}
+[data-community-book] .community-check[hidden]{display:none}
+.community-portrait{display:block;max-width:7rem;max-height:7rem;object-fit:contain;margin:.3rem auto .65rem;border-radius:.65rem}
+
+[data-community-book] .community-list{gap:0;margin:16px 0;text-align:start}
+[data-community-book] .community-list li{border-top:1px solid #d8d2c4}
+[data-community-book] .shared-memory-card{width:100%;display:flex;align-items:center;gap:14px;padding:15px 5px;border:0;border-radius:0;background:transparent;color:#344738;text-align:start;cursor:pointer}
+[data-community-book] .shared-memory-card:hover{background:#f2efe5}
+.shared-memory-card img{width:54px;height:58px;flex:none;object-fit:contain;border-radius:7px;background:#eee9db}
+.shared-memory-card>span{display:grid;gap:5px;min-width:0}
+.shared-memory-card strong{font:600 1.13rem/1.3 Lora,Georgia,serif}
+.shared-memory-card span span{font-weight:400;line-height:1.45}
+
+.public-keepsake-shelf{width:min(100%,40rem);margin:auto}
+.public-keepsake-shelf>p:first-child{margin:.25rem auto 1rem;line-height:1.55}
+[data-community-book] .public-keepsake-shelf details{padding:.7rem 1rem;background:#f2efe8}
+.public-keepsake-shelf summary{cursor:pointer;font-weight:700}
+.public-keepsake-shelf .keepsake-list{display:grid;gap:.85rem;margin:1rem 0;padding:0;list-style:none}
+.keepsake-list li{min-width:0;padding:1rem clamp(.8rem,3vw,1.5rem);overflow-wrap:anywhere;background:#fbf9f4;color:#282d32;border:1px solid #b7b3a9}
+.keepsake-list.stones li{border-radius:1.35rem;background:#e8e5de}
+.keepsake-list.letters li{border-radius:.3rem;border-top:3px solid #865b40}
+[data-community-book] .keepsake-list blockquote{margin:.45rem 0 0;padding:0;background:none;white-space:pre-wrap;overflow-wrap:anywhere;font-family:Georgia,serif;font-size:clamp(1.05rem,2vw,1.2rem);line-height:1.6}
+.keepsake-list strong{color:#614431;font-size:.95rem}
+.keepsake-list button{margin-top:.75rem}
+
+.public-keepsake-shelf .garden-family-memory{margin:.8rem 0 1rem;padding:.7rem 1rem;border-inline:2px solid #865b40;background:#f2efe8}
+[data-community-book] .garden-family-memory blockquote{margin:0;padding:0;background:none;font:italic 1.08rem/1.55 Georgia,serif}
+.garden-family-memory figcaption{margin-top:.3rem;font-size:.9rem}

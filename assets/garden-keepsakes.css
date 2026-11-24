@@ -1,0 +1,33 @@
+.garden-wall .cabinet-heading h3 {font-size:clamp(1.4rem,2.7vw,2rem)}
+.cabinet-heading .button {margin:.65rem auto .35rem}
+.garden-wall .cabinet-heading .garden-private {margin:.3rem auto .65rem}
+.garden-wall .cabinet-list {display:grid;max-width:36rem;justify-items:stretch;justify-content:stretch;gap:.75rem;margin:.65rem auto}
+.cabinet-picker {display:flex;align-items:center;justify-content:center;gap:.5rem;color:#4a5742;font-weight:650}
+.cabinet-picker select {max-width:65%;min-height:40px;border:1px solid #c9c1ad;border-radius:.6rem;background:#fffbef;padding:4px 10px;font:inherit}
+.cabinet-list .garden-shared {width:100%}
+.cabinet-list .pet-cabinet {width:100%;box-sizing:border-box;display:grid;grid-template-columns:minmax(72px,.75fr) minmax(0,1.55fr);align-items:center;gap:.55rem;padding:.85rem;border:1px solid #dcbea5;border-radius:1.1rem;background:linear-gradient(155deg,#fffdf3,#faf0dc);box-shadow:0 4px 12px #6944220a}
+.pet-cabinet .cabinet-portrait {display:grid;place-items:center;padding:0;line-height:1;background:#eee2cb;border-radius:45% 45% 12% 12%;overflow:hidden}
+.pet-cabinet .cabinet-portrait img {width:100%;height:100%;max-height:185px;object-fit:contain;background:transparent}
+.cabinet-initial {display:grid;min-height:88px;align-items:center;color:#875834;font:500 2.8rem/1 Georgia,serif}
+.pet-cabinet .cabinet-letter {padding:.2rem .1rem;gap:.3rem;min-width:0}
+.pet-cabinet .cabinet-letter h3 {font:600 clamp(1.25rem,2vw,1.7rem)/1.18 Lora,Georgia,serif}
+.pet-cabinet .cabinet-letter p {max-height:9rem;overflow:auto;font-size:.92rem;white-space:pre-wrap;line-height:1.45}
+.cabinet-letter small {color:#705a46}
+.pet-cabinet :is(.cabinet-gifts,.cabinet-tools,.cabinet-tending) {grid-column:1/-1;width:100%;box-sizing:border-box}
+.pet-cabinet .cabinet-gifts {border:0;border-top:1px solid #e3d6bf;padding:.25rem 0 0;margin:.3rem 0 0}
+.cabinet-gifts legend {margin:auto;padding:0 .5rem;font-size:.83rem;font-weight:700}
+.cabinet-gifts .garden-memory-actions {display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:4px}
+.cabinet-gifts button {display:grid;justify-items:center;align-content:center;gap:2px;min-width:0;min-height:46px;border-radius:.75rem;padding:.25rem 0;background:#fffaf0;color:#494b39}
+.cabinet-gifts button span[aria-hidden] {font-size:1.2rem}
+.cabinet-gifts button[aria-pressed=true] {background:#e6efdc;border-color:#788a67}
+.pet-cabinet .cabinet-tending {text-align:center;font-size:.85rem}
+.cabinet-tending summary {cursor:pointer;padding:.45rem;color:#4c6247;font-weight:650}
+.cabinet-tending form {display:flex;align-items:flex-end;gap:6px;padding:.4rem 0}
+.cabinet-tending label {text-align:left;font-size:.78rem;flex:1;min-width:0}
+.cabinet-tending input {box-sizing:border-box;width:100%;min-height:39px;border:1px solid #c6bbaa;border-radius:.45rem;background:#fffdf7;padding:.4rem;color:inherit;font:inherit}
+.cabinet-tending button {min-height:39px;font-size:.78rem}
+.pet-cabinet .cabinet-tools {display:flex;justify-content:center;padding:0;gap:.2rem}
+.cabinet-tools button {min-height:35px;background:transparent;border:0;text-decoration:underline;text-underline-offset:3px;color:#665444}
+.cabinet-dates {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.5rem;margin:0;border:0;padding:0}
+.cabinet-dates legend {margin-bottom:.3rem;font-weight:650}
+.cabinet-dates input {min-inline-size:0}

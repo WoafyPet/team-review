@@ -1,0 +1,101 @@
+/* Map the imported care and commerce themes to the shared WoafyPet palette. */
+html body.legacy-page[class],
+body.care-guide-editorial {
+  --care-warm: color-mix(in srgb, var(--brand-cognac) 10%, var(--brand-porcelain));
+  --care-selected: color-mix(in srgb, var(--brand-cobalt) 9%, var(--brand-porcelain));
+  --canvas: var(--brand-porcelain);
+  --oat: var(--brand-paper);
+  --sand: var(--care-warm);
+  --line: var(--brand-divider);
+  --accent: var(--brand-cobalt);
+  --clay-dark: var(--brand-cognac);
+  --rose: var(--care-warm);
+}
+
+html body.combined-shop.store-page {
+  --store-cream: var(--brand-porcelain);
+  --store-warm: var(--care-warm);
+  --store-media: var(--brand-porcelain);
+  --store-ink: var(--brand-graphite);
+  --store-muted: var(--brand-muted);
+  --store-rust: var(--brand-cognac);
+  --store-rust-dark: var(--brand-graphite);
+  --store-sage: var(--brand-cobalt);
+  --store-line: var(--brand-divider);
+  background: var(--brand-porcelain);
+  color: var(--store-ink);
+}
+.combined-shop .shop-offers-banner {
+  background: var(--brand-graphite);
+  color: var(--brand-porcelain);
+}
+.combined-shop .shop-offers-banner a { color: inherit; }
+.combined-shop .combined-shop-cart {
+  background: var(--brand-orange);
+  color: var(--brand-button-ink);
+}
+.combined-shop .combined-shop-cart:is(:hover, :focus-visible) {
+  background: var(--brand-graphite);
+  color: var(--brand-porcelain);
+}
+.combined-shop :is(.product-detail-price, .product-card-footer > strong) { color: var(--brand-graphite); }
+.combined-shop .care-stock-label { color: var(--store-muted); }
+.combined-shop .product-rating-link { color: var(--brand-cobalt); }
+.combined-shop :is(.shop-cart, .checkout-form-panel, .checkout-summary, .product-mobile-purchase, .product-reviews-section, [data-product-story]) {
+  background-color: var(--brand-paper);
+  border-color: var(--brand-divider);
+}
+.combined-shop .product-mobile-purchase { border-top-color: var(--brand-silver); }
+.combined-shop .product-thumbnails button { background-color: var(--store-media); }
+.combined-shop .product-thumbnails button[aria-pressed="true"] { border-color: var(--brand-cobalt); }
+
+/* The legacy form rules lock their feedback colors with !important. */
+html body.legacy-page[class]:not(.combined-shop) main button[type="submit"]:not(.button) {
+  background-color: var(--brand-orange) !important;
+  border-color: var(--brand-orange) !important;
+  color: var(--brand-button-ink) !important;
+}
+html body.legacy-page[class]:not(.combined-shop) main button[type="submit"]:not(.button):enabled:hover {
+  background-color: var(--brand-orange-hover) !important;
+  border-color: var(--brand-cognac) !important;
+}
+html body.legacy-page[class]:not(.combined-shop) main button[aria-pressed="true"] {
+  background-color: var(--brand-cobalt) !important;
+  border-color: var(--brand-cobalt) !important;
+  color: var(--brand-porcelain) !important;
+}
+html body.legacy-page[class]:not(.combined-shop) main :is(input:not([type="checkbox"]):not([type="radio"]):not([type="hidden"]), textarea, select) {
+  background-color: var(--brand-paper) !important;
+  border-color: color-mix(in srgb, var(--brand-graphite) 45%, var(--brand-porcelain)) !important;
+  color: var(--brand-graphite) !important;
+}
+html body.legacy-page[class]:not(.combined-shop) main ::placeholder { color: var(--muted); }
+html body.legacy-page[class]:not(.combined-shop) main :is(input[type="checkbox"], input[type="radio"]) { accent-color: var(--brand-cobalt); }
+html body.legacy-page[class]:not(.combined-shop) main :is(.lesson-visibility, .condition-picker) label:has(input:checked) {
+  background-color: var(--care-selected) !important;
+  border-color: var(--brand-cobalt) !important;
+}
+html body.legacy-page[class]:not(.combined-shop) :is(.lesson-triage-v9, .guide-triage-first, .health-triage-first, .emergency-strip-v6, .call-sooner-v7, .guide-mobile-triage, .lesson-mobile-triage) {
+  background-color: var(--care-warm) !important;
+  border-color: var(--brand-cognac) !important;
+}
+.care-directory #main-content .listing-media,
+.care-guide-editorial :is(.tracking-plan, .guide-cover) {
+  background-color: var(--brand-porcelain);
+}
+.care-guide-editorial :is(.triage, .care-decision:last-child) { background-color: var(--care-warm); }
+.care-guide-editorial .guide-navigation a:is(:hover, :focus-visible) {
+  background-color: var(--care-selected);
+  border-color: var(--brand-cobalt);
+}
+.circle-hub .circle-community :is(summary, article button),
+.circle-hub .circle-attachment > summary,
+.circle-hub .circle-published-answer :is(h4, h5) { color: var(--brand-cobalt); }
+.circle-hub .circle-thread .circle-owner-reply { border-inline-start-color: var(--brand-silver); }
+.circle-hub .circle-thread .circle-byline { color: var(--brand-cognac); }
+.circle-hub .circle-community details:focus-within { outline-color: var(--brand-cobalt); }
+.circle-hub .circle-attachment input::file-selector-button {
+  color: var(--brand-cobalt);
+  background: var(--brand-paper);
+  border-color: var(--brand-silver);
+}

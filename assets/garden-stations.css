@@ -1,0 +1,65 @@
+/* Forms sit beside the active landmark, with the garden visible behind them. */
+.garden-station {color:#384334;font-size:.98rem;line-height:1.5;min-width:0;overflow-wrap:break-word}
+.garden-station :is(h2,h3,h4) {font:600 1.22rem/1.22 Lora,Georgia,serif;margin:.9rem 0 .5rem;color:#35422f}
+.garden-station :is(h3,h4) {font-size:1.04rem}
+.garden-station p {margin:.45rem 0 .8rem}
+.garden-station a {color:#744a35;text-decoration:underline;text-underline-offset:.17em}
+.garden-station label {display:block;margin:.55rem 0}
+.garden-station label>span:first-child,.garden-station legend {font-weight:600}
+.garden-station :is(input:not([type=checkbox]):not([type=radio]),select,textarea) {display:block;width:100%;min-width:0;box-sizing:border-box;min-height:44px;margin-top:.25rem;padding:.57rem .68rem;font:inherit;font-size:16px;line-height:1.35;background:#fffdf8;color:#333d32;border:1px solid #a9afa1;border-radius:8px}
+.garden-station :is(input[type=checkbox],input[type=radio]) {accent-color:#536a4d}
+.garden-station textarea {min-height:76px;resize:vertical}
+.garden-station :is(.button,button) {display:inline-flex;align-items:center;justify-content:center;min-height:44px;line-height:1.25;padding:.55rem .86rem;margin:.2rem .25rem .3rem 0;border:1px solid #b8b5a6;border-radius:9px;background:#fffaf0;color:#454b3a;font-size:.95rem;font-weight:600;cursor:pointer;text-decoration:none}
+.garden-station :is(button[type=submit],.primary,.station-note button) {background:#50664a;color:white;border-color:#50664a}
+.garden-station :is(.button,button,summary,a):focus-visible {outline:3px solid #71583e;outline-offset:2px}
+.garden-station .station-action {display:flex;width:100%;text-align:center;background:#f2f1e5}
+.garden-station :is(fieldset,.wrap,.wm-wrap,article,section,form,aside) {min-width:0;max-width:100%;box-sizing:border-box}
+.garden-station :is(.station-fold,[data-circle-compose]) {border:1px solid #d4cbb9;background:#fffaf0;border-radius:10px;padding:0 .8rem;margin:.6rem 0}
+.garden-station :is(.station-fold,[data-circle-compose])>summary {display:list-item;cursor:pointer;padding:.7rem .2rem;font-weight:650}
+.garden-station details[open] {padding-bottom:.6rem}
+.garden-station .station-topics {display:grid;gap:0}
+.garden-station .station-topics a {display:block;padding:.6rem 0;border-top:1px solid #e3dac9}
+.garden-station :is(.account-scene-panel,.care-conversation,[data-owner-circle],[data-health-root]) {padding:0;margin:0;width:100%;background:none;box-shadow:none}
+.garden-station fieldset {padding:.5rem .65rem;border:1px solid #d6cbb9;border-radius:7px;margin:.7rem 0}
+.garden-station :is(img,video) {max-width:100%;height:auto}
+.garden-station :is(.profile-photo-preview,.account-pet-photo,[data-question-image-preview]) {max-height:135px;object-fit:contain}
+.garden-station :is(.account-form-v8 header,.health-form-card>header,.loss-script-label,.account-scene-panel .profile-gate-or) {display:none}
+.garden-station :is(ul,ol) {padding-left:1.4rem}
+.garden-station :is(.health-insight-grid,.health-share-form,.account-profile-actions,.station-result) {margin:.55rem 0}
+.garden-station .health-empty {padding:.7rem 0}
+.garden-station :is(.health-timeline-marker,.health-summary-grid,.health-empty>span:first-child:empty) {display:none}
+.garden-station [hidden] {display:none!important}
+.garden-station [role=status]:empty {display:none}
+.garden-station [role=status]:not(:empty) {font-size:.88rem;line-height:1.4}
+.garden-station .circle-community>h2:first-child {margin-top:0}
+.garden-station [data-circle-stories] article {border-top:1px solid #d4cbb9;padding:.52rem 0}
+.garden-station :is(.sr-only,.visually-hidden) {position:absolute;width:1px;height:1px;padding:0;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+
+/* Garden reading panels */
+.garden-page .garden-visit {background:#fdfaf5;border-color:#d9d4c7;box-shadow:0 8px 26px #292c1d12}
+.garden-page .garden-visit-bar {padding:10px 14px 10px 21px;background:#f4f1e9;border-bottom:1px solid #ddd8ca}
+.garden-page .garden-visit-bar h2 {font:600 clamp(1.1rem,1.8vw,1.35rem)/1.3 Inter,sans-serif;letter-spacing:-.025em;color:#293e32;margin:0}
+.garden-page .garden-visit-bar [data-back] {width:44px;height:44px;min-height:44px;background:transparent;border-color:transparent;font:400 1.5rem/1 Inter,sans-serif;color:#344b3c}
+.garden-page .garden-visit-bar [data-back]:hover {background:#e7e7dc}
+.garden-page .garden-station {font-family:Inter,"Plus Jakarta Sans",sans-serif;color:#354136;padding:18px clamp(15px,2.2vw,26px) 24px;line-height:1.55}
+.garden-station :is(.station-fold,[data-circle-compose]) {margin:0;border:0;border-block-end:1px solid #d9dace;border-radius:0;padding:0;background:transparent}
+.garden-station :is(.station-fold,[data-circle-compose])>summary {display:grid;grid-template-columns:minmax(0,1fr) 12px;align-items:center;gap:14px;min-height:48px;padding:13px 3px;text-align:start;list-style:none;font:550 clamp(.96rem,1.2vw,1.06rem)/1.45 Inter,sans-serif;letter-spacing:-.012em;color:#314c3a}
+.garden-station summary::-webkit-details-marker {display:none}
+.garden-station details>summary::after,.garden-station details[open]>summary::after {content:"";box-sizing:border-box;width:8px;height:8px;margin:0;border-right:1.5px solid currentColor;border-bottom:1.5px solid currentColor;justify-self:center;transform:rotate(45deg);color:#777e6e}
+.garden-station details[open]>summary::after {transform:rotate(225deg)}
+.garden-station .station-fold[open]>summary {color:#7e482e}
+.garden-station [data-grief-stages] {padding:0;text-align:start}
+.garden-station [data-grief-stages]>p:first-child {font:500 clamp(1.35rem,2.5vw,1.8rem)/1.23 Lora,Georgia,serif;letter-spacing:-.035em;color:#293e32;margin:2px 0 14px}
+.garden-station [data-grief-stages]>.station-fold:first-of-type {border-top:1px solid #d9dace}
+.garden-station [data-grief-stages] article {margin:0 0 15px;font-size:.95rem}
+.garden-station [data-grief-stages] article :is(h2,h3,h4) {color:#394b3c;font:600 1rem/1.4 Inter,sans-serif;letter-spacing:0}
+.garden-station [data-grief-stages] article p {line-height:1.6}
+
+/* Let the support drawer follow the reading, with the garden behind it. */
+.garden-page .garden-map[data-visiting="support"] .garden-world {inset:0;height:auto}
+.garden-page [data-visiting="support"] .garden-visit {inset-block:8px auto;height:fit-content;max-height:calc(100% - 16px)}
+.garden-page [data-visiting="support"] .garden-visit-body {flex:0 1 auto;min-height:0}
+.garden-page [data-visiting="support"] .garden-station {height:auto}
+@media(max-width:900px){
+ .garden-page [data-visiting="support"] .garden-visit {inset-block:auto 5px;max-height:70%}
+}

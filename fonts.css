@@ -1,0 +1,18 @@
+@font-face{font-family:'Plus Jakarta Sans';font-style:normal;font-weight:200 800;font-display:swap;src:url('assets/fonts/PlusJakartaSans-variable.ttf') format('truetype')}
+@font-face{font-family:'DM Serif Display';font-style:normal;font-weight:400;font-display:swap;src:url('assets/fonts/DMSerifDisplay-Regular.ttf') format('truetype')}
+
+@font-face {
+  font-family: Lora;
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url('assets/fonts/Lora-Variable.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url('assets/fonts/Inter-Latin-Variable.woff2') format('woff2');
+}
