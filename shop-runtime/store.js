@@ -3294,6 +3294,7 @@ document.querySelector("[data-review-open]")?.addEventListener("click", () => do
 document.querySelector("[data-review-close]")?.addEventListener("click", () => document.querySelector("[data-review-dialog]").close());
 
 const renderProductContent = (root, product) => {
+  if (product.formula && document.querySelector("[data-supplement-guide]")) return;
   document.querySelector("[data-product-story]")?.remove();
   document.querySelector("[data-product-section-nav]")?.remove();
   const story = document.createElement("div");

@@ -60,19 +60,40 @@
 .combined-shop .stock-alert-row input { flex: 1; min-width: 0; max-width: 19rem; padding: .75rem 1rem; background: white; color: #282d32; border: 1px solid #865b40; border-radius: 6px; font: inherit; }
 .combined-shop .stock-alert-row .button { flex: none; white-space: nowrap; }
 .combined-shop .stock-alert-form p { margin: 0; font-size: .88rem; line-height: 1.5; }
-.combined-shop .stock-alert-form a, .combined-shop .serving-comparison a { text-decoration: underline; text-underline-offset: .18em; }
+.combined-shop .stock-alert-form a { text-decoration: underline; text-underline-offset: .18em; }
 .combined-shop .stock-alert-form [hidden], .combined-shop .stock-alert-form output:empty { display: none; }
 .combined-shop .stock-alert-form output { font-weight: 650; }
-.combined-shop .serving-comparison { padding-block: 1rem; text-align: center; }
-.combined-shop .serving-comparison details { border-block: 1px solid var(--store-line); padding-block: .9rem; }
-.combined-shop .serving-comparison summary { cursor: pointer; font-weight: 650; }
-.combined-shop .serving-comparison p { margin: .65rem auto; }
-.combined-shop .reference-ingredients { margin: 1.25rem 0; padding: 1.25rem 1rem; background: var(--store-paper, #f2efe8); border-block: 1px solid var(--store-line); text-align: center; }
-.combined-shop .reference-ingredients h2 { margin: 0; font-size: 1.5rem; }
-.combined-shop .reference-ingredients p { margin: .35rem 0 1rem; }
-.combined-shop .reference-ingredients a { text-decoration: underline; text-underline-offset: .18em; }
-.combined-shop .reference-ingredients dl { display: grid; gap: .65rem; margin: 0; }
-.combined-shop .reference-ingredients dt { font-weight: 650; }
-.combined-shop .reference-ingredients dd { margin: .15rem 0 0; line-height: 1.5; }
 @media(max-width:1100px){.combined-shop .stock-alert-row{flex-wrap:wrap}.combined-shop .stock-alert-row input{min-width:12rem}}
 @media(max-width:600px){.combined-shop .stock-alert-row{display:grid}.combined-shop .stock-alert-row input{max-width:none;min-height:48px;width:100%;box-sizing:border-box}}
+
+.combined-shop [data-supplement-detail] { padding-block: clamp(18px, 3vw, 40px); }
+.combined-shop [data-supplement-detail] .product-detail-grid { align-items: center; }
+.combined-shop [data-supplement-detail] .product-detail-copy { gap: 12px; min-width: 0; }
+.combined-shop [data-supplement-detail] .product-detail-copy > nav { justify-content: center; }
+.combined-shop [data-supplement-detail] :is(.product-lead, h1, .product-included) { width: 100%; max-width: none; margin: 0; text-align: center; }
+.combined-shop [data-supplement-detail] .product-included { display: flex; flex-wrap: wrap; justify-content: center; gap: .4rem 1.4rem; }
+.combined-shop [data-supplement-detail] .product-included li { padding: 0; }
+.combined-shop [data-supplement-detail] .product-included li::before { content: none; }
+.combined-shop [data-supplement-detail] .stock-alert-form { margin: 0; }
+.combined-shop .supplement-guide { padding-inline: clamp(12px, 3.5vw, 64px); margin: 0 auto clamp(24px, 3vw, 48px); color: #282d32; text-align: center; }
+.combined-shop .supplement-guide :is(h2,h3,p) { max-width: none; width: 100%; margin: 0; text-wrap: pretty; }
+.combined-shop .supplement-guide h2 { font: 400 clamp(29px, 3.3vw, 52px)/1.14 var(--display); text-wrap: balance; }
+.combined-shop .supplement-guide h3 { font: 650 clamp(18px, 1.5vw, 22px)/1.35 var(--font); }
+.combined-shop .supplement-guide p { font-size: clamp(15px, 1.2vw, 18px); line-height: 1.55; }
+.combined-shop .supplement-guide-panel { padding: clamp(18px, 2.2vw, 34px) clamp(12px, 2vw, 28px); background: #282d32; color: #f2efe8; border-radius: 14px; }
+.combined-shop .supplement-guide-panel :is(h2,h3,p) { color: inherit; }
+.combined-shop .supplement-guide-panel > p { margin-top: .5rem; }
+.combined-shop .supplement-ingredients { display: flex; flex-wrap: wrap; justify-content: center; gap: .5rem; margin: 1rem 0; padding: 0; list-style: none; }
+.combined-shop .supplement-ingredients li { max-width: 100%; padding: .42rem .82rem; border: 1px solid #737779; border-radius: 99px; color: #f2efe8; font-size: .98rem; line-height: 1.4; }
+.combined-shop .supplement-use { border-top: 1px solid #565c60; padding-top: .9rem; }
+.combined-shop .supplement-use p, .combined-shop .supplement-scenes p { margin-top: .35rem; }
+.combined-shop .supplement-routine { padding-block-start: clamp(24px, 3.5vw, 52px); }
+.combined-shop .supplement-scenes { margin-top: clamp(14px, 2vw, 26px); display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: clamp(12px, 2vw, 30px); }
+.combined-shop .supplement-scenes figure { margin: 0; min-width: 0; }
+.combined-shop .supplement-scenes img { display: block; width: 100%; height: auto; aspect-ratio: 5/4; object-fit: cover; object-position: center 62%; border-radius: 8px; background: #f2efe8; }
+.combined-shop .supplement-scenes img[src*="gut-support"] { object-position: center 82%; }
+.combined-shop .supplement-scenes figcaption { padding-block-start: .65rem; }
+@media(max-width:650px){
+ .combined-shop .supplement-scenes { grid-template-columns: minmax(0, 1fr); gap: 20px; }
+ .combined-shop [data-supplement-detail] .product-detail-grid { gap: 16px; }
+}
