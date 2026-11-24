@@ -50,9 +50,9 @@
 .garden-page .garden-pins a:is(:hover, :focus-visible, [aria-current="location"]),
 .garden-page .garden-intro .garden-destinations a:is(:hover, :focus-visible),
 .garden-page .garden-map .garden-avatar[open] > summary {
-  color: var(--garden-paper);
-  background: var(--brand-accent);
-  border-color: var(--brand-accent);
+  color: var(--brand-button-ink);
+  background: var(--brand-orange);
+  border-color: var(--brand-orange);
 }
 
 .garden-page .garden-map-controls button,
@@ -114,7 +114,7 @@
 .garden-page .garden-avatar button,
 .garden-page .button.primary {
   color: var(--brand-button-ink);
-  background: var(--brand-accent);
+  background: var(--brand-orange);
   border-color: transparent;
 }
 

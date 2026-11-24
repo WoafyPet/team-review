@@ -32,7 +32,7 @@ html body.combined-shop.store-page {
 }
 .combined-shop .shop-offers-banner a { color: inherit; }
 .combined-shop .combined-shop-cart {
-  background: var(--brand-accent);
+  background: var(--brand-orange);
   color: var(--brand-button-ink);
 }
 .combined-shop .combined-shop-cart:is(:hover, :focus-visible) {
@@ -52,8 +52,8 @@ html body.combined-shop.store-page {
 
 /* The legacy form rules lock their feedback colors with !important. */
 html body.legacy-page[class]:not(.combined-shop) main button[type="submit"]:not(.button) {
-  background-color: var(--brand-accent) !important;
-  border-color: var(--brand-accent) !important;
+  background-color: var(--brand-orange) !important;
+  border-color: var(--brand-orange) !important;
   color: var(--brand-button-ink) !important;
 }
 html body.legacy-page[class]:not(.combined-shop) main button[type="submit"]:not(.button):enabled:hover {
@@ -61,9 +61,9 @@ html body.legacy-page[class]:not(.combined-shop) main button[type="submit"]:not(
   border-color: var(--brand-cognac) !important;
 }
 html body.legacy-page[class]:not(.combined-shop) main button[aria-pressed="true"] {
-  background-color: var(--brand-accent) !important;
-  border-color: var(--brand-accent) !important;
-  color: var(--brand-porcelain) !important;
+  background-color: var(--brand-orange) !important;
+  border-color: var(--brand-orange) !important;
+  color: var(--brand-button-ink) !important;
 }
 html body.legacy-page[class]:not(.combined-shop) main :is(input:not([type="checkbox"]):not([type="radio"]):not([type="hidden"]), textarea, select) {
   background-color: var(--brand-paper) !important;
@@ -74,7 +74,7 @@ html body.legacy-page[class]:not(.combined-shop) main ::placeholder { color: var
 html body.legacy-page[class]:not(.combined-shop) main :is(input[type="checkbox"], input[type="radio"]) { accent-color: var(--brand-accent); }
 html body.legacy-page[class]:not(.combined-shop) main :is(.lesson-visibility, .condition-picker) label:has(input:checked) {
   background-color: var(--care-selected) !important;
-  border-color: var(--brand-accent) !important;
+  border-color: var(--brand-orange) !important;
 }
 html body.legacy-page[class]:not(.combined-shop) :is(.lesson-triage-v9, .guide-triage-first, .health-triage-first, .emergency-strip-v6, .call-sooner-v7, .guide-mobile-triage, .lesson-mobile-triage) {
   background-color: var(--care-warm) !important;

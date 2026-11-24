@@ -49,7 +49,7 @@
   border-top-color: var(--brand-cognac);
 }
 
-/* Copper highlights the readings and numbered layers on a quiet stone surface. */
+/* Keep label text legible beside the signature orange markers. */
 :is(.home, .smart-bed-page) #main .home-training-proof,
 .home #main .health-at-home,
 .reserve-view #main .base-information {
@@ -73,13 +73,13 @@
 }
 
 :is(.home, .smart-bed-page) #main .construction-art .layer-marker {
-  background-color: var(--brand-accent);
+  background-color: var(--brand-orange);
   border-color: var(--brand-porcelain);
-  color: var(--brand-porcelain);
+  color: var(--brand-button-ink);
 }
 
 :is(.home, .smart-bed-page) #main .construction-art .layer-marker::before {
-  background-color: var(--brand-accent);
+  background-color: var(--brand-orange);
 }
 
 :is(.home, .smart-bed-page) #main .construction-layers .layer-number {

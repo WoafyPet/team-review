@@ -144,7 +144,7 @@ function buildWorld(host, T) {
   }
   box(court,0,2.16,-.75,2.59,.14,.20,teal);
   box(court,0,1.90,-.70,1.71,.37,.12,0x865b40);
-  label(court,'Lantern Court',0,1.91,-.626,1.61,.30,'#f2efe8','#2446a8');
+  label(court,'Lantern Court',0,1.91,-.626,1.61,.30,'#f2efe8','#865b40');
   batch(court);pick(court,'court');
   for(const stop of places){
     const g=group(island,stop.x,0,stop.z);landmarks.set(stop.key,g);pick(g,'place',stop.key);

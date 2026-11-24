@@ -1,17 +1,17 @@
-/* Colors sampled from woafy.pet’s editorial sections, controls and footer. */
+/* WoafyPet's original Warm Vitality swatches. */
 :root {
-  --brand-porcelain: #FBF6EF;
-  --brand-paper: #F4F1EE;
-  --brand-graphite: #211B17;
-  --brand-night: #15110F;
-  --brand-muted: #5D5148;
-  --brand-divider: #E9DED2;
-  --brand-silver: #BDAE9E;
-  --brand-cognac: #704624;
-  --brand-accent: #A95527;
-  --brand-orange: #B56534;
-  --brand-button-ink: #fff;
-  --brand-hover: #9E542C;
+  --brand-orange: #EA5F02;
+  --brand-porcelain: #F2EFE8;
+  --brand-graphite: #282D32;
+  --brand-cognac: #865B40;
+  --brand-silver: #A8ADB2;
+  --brand-night: #171A1D;
+  --brand-paper: color-mix(in srgb, var(--brand-porcelain) 60%, white);
+  --brand-muted: color-mix(in srgb, var(--brand-graphite) 74%, var(--brand-silver));
+  --brand-divider: color-mix(in srgb, var(--brand-silver) 48%, var(--brand-porcelain));
+  --brand-accent: var(--brand-cognac);
+  --brand-button-ink: var(--brand-night);
+  --brand-hover: color-mix(in srgb, var(--brand-orange) 80%, var(--brand-porcelain));
   --section-gap: clamp(12px, 1.25vw, 20px);
 }
 
@@ -56,8 +56,8 @@ html body[class] .site-header #site-nav .care-menu > div {
 /* These controls also appear inside the legacy templates, whose colors use !important. */
 html body[class] :is(main, #main, .cart-drawer, dialog) :is(a, button).button {
   color: var(--brand-button-ink) !important;
-  background: var(--brand-accent) !important;
-  border-color: var(--brand-accent) !important;
+  background: var(--brand-orange) !important;
+  border-color: var(--brand-orange) !important;
 }
 html body[class] :is(main, #main, .cart-drawer, dialog) :is(a, button).button:hover {
   color: var(--brand-button-ink) !important;
