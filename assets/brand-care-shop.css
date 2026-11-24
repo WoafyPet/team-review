@@ -2,12 +2,12 @@
 html body.legacy-page[class],
 body.care-guide-editorial {
   --care-warm: color-mix(in srgb, var(--brand-cognac) 10%, var(--brand-porcelain));
-  --care-selected: color-mix(in srgb, var(--brand-cobalt) 9%, var(--brand-porcelain));
+  --care-selected: color-mix(in srgb, var(--brand-accent) 9%, var(--brand-porcelain));
   --canvas: var(--brand-porcelain);
   --oat: var(--brand-paper);
   --sand: var(--care-warm);
   --line: var(--brand-divider);
-  --accent: var(--brand-cobalt);
+  --accent: var(--brand-accent);
   --clay-dark: var(--brand-cognac);
   --rose: var(--care-warm);
 }
@@ -20,18 +20,19 @@ html body.combined-shop.store-page {
   --store-muted: var(--brand-muted);
   --store-rust: var(--brand-cognac);
   --store-rust-dark: var(--brand-graphite);
-  --store-sage: var(--brand-cobalt);
+  --store-sage: var(--brand-accent);
   --store-line: var(--brand-divider);
   background: var(--brand-porcelain);
   color: var(--store-ink);
 }
 .combined-shop .shop-offers-banner {
-  background: var(--brand-graphite);
-  color: var(--brand-porcelain);
+  background: var(--brand-paper);
+  color: var(--brand-graphite);
+  border-block-color: var(--brand-divider);
 }
 .combined-shop .shop-offers-banner a { color: inherit; }
 .combined-shop .combined-shop-cart {
-  background: var(--brand-orange);
+  background: var(--brand-accent);
   color: var(--brand-button-ink);
 }
 .combined-shop .combined-shop-cart:is(:hover, :focus-visible) {
@@ -40,28 +41,28 @@ html body.combined-shop.store-page {
 }
 .combined-shop :is(.product-detail-price, .product-card-footer > strong) { color: var(--brand-graphite); }
 .combined-shop .care-stock-label { color: var(--store-muted); }
-.combined-shop .product-rating-link { color: var(--brand-cobalt); }
+.combined-shop .product-rating-link { color: var(--brand-accent); }
 .combined-shop :is(.shop-cart, .checkout-form-panel, .checkout-summary, .product-mobile-purchase, .product-reviews-section, [data-product-story]) {
   background-color: var(--brand-paper);
   border-color: var(--brand-divider);
 }
 .combined-shop .product-mobile-purchase { border-top-color: var(--brand-silver); }
 .combined-shop .product-thumbnails button { background-color: var(--store-media); }
-.combined-shop .product-thumbnails button[aria-pressed="true"] { border-color: var(--brand-cobalt); }
+.combined-shop .product-thumbnails button[aria-pressed="true"] { border-color: var(--brand-accent); }
 
 /* The legacy form rules lock their feedback colors with !important. */
 html body.legacy-page[class]:not(.combined-shop) main button[type="submit"]:not(.button) {
-  background-color: var(--brand-orange) !important;
-  border-color: var(--brand-orange) !important;
+  background-color: var(--brand-accent) !important;
+  border-color: var(--brand-accent) !important;
   color: var(--brand-button-ink) !important;
 }
 html body.legacy-page[class]:not(.combined-shop) main button[type="submit"]:not(.button):enabled:hover {
-  background-color: var(--brand-orange-hover) !important;
+  background-color: var(--brand-hover) !important;
   border-color: var(--brand-cognac) !important;
 }
 html body.legacy-page[class]:not(.combined-shop) main button[aria-pressed="true"] {
-  background-color: var(--brand-cobalt) !important;
-  border-color: var(--brand-cobalt) !important;
+  background-color: var(--brand-accent) !important;
+  border-color: var(--brand-accent) !important;
   color: var(--brand-porcelain) !important;
 }
 html body.legacy-page[class]:not(.combined-shop) main :is(input:not([type="checkbox"]):not([type="radio"]):not([type="hidden"]), textarea, select) {
@@ -70,10 +71,10 @@ html body.legacy-page[class]:not(.combined-shop) main :is(input:not([type="check
   color: var(--brand-graphite) !important;
 }
 html body.legacy-page[class]:not(.combined-shop) main ::placeholder { color: var(--muted); }
-html body.legacy-page[class]:not(.combined-shop) main :is(input[type="checkbox"], input[type="radio"]) { accent-color: var(--brand-cobalt); }
+html body.legacy-page[class]:not(.combined-shop) main :is(input[type="checkbox"], input[type="radio"]) { accent-color: var(--brand-accent); }
 html body.legacy-page[class]:not(.combined-shop) main :is(.lesson-visibility, .condition-picker) label:has(input:checked) {
   background-color: var(--care-selected) !important;
-  border-color: var(--brand-cobalt) !important;
+  border-color: var(--brand-accent) !important;
 }
 html body.legacy-page[class]:not(.combined-shop) :is(.lesson-triage-v9, .guide-triage-first, .health-triage-first, .emergency-strip-v6, .call-sooner-v7, .guide-mobile-triage, .lesson-mobile-triage) {
   background-color: var(--care-warm) !important;
@@ -86,16 +87,16 @@ html body.legacy-page[class]:not(.combined-shop) :is(.lesson-triage-v9, .guide-t
 .care-guide-editorial :is(.triage, .care-decision:last-child) { background-color: var(--care-warm); }
 .care-guide-editorial .guide-navigation a:is(:hover, :focus-visible) {
   background-color: var(--care-selected);
-  border-color: var(--brand-cobalt);
+  border-color: var(--brand-accent);
 }
 .circle-hub .circle-community :is(summary, article button),
 .circle-hub .circle-attachment > summary,
-.circle-hub .circle-published-answer :is(h4, h5) { color: var(--brand-cobalt); }
+.circle-hub .circle-published-answer :is(h4, h5) { color: var(--brand-accent); }
 .circle-hub .circle-thread .circle-owner-reply { border-inline-start-color: var(--brand-silver); }
 .circle-hub .circle-thread .circle-byline { color: var(--brand-cognac); }
-.circle-hub .circle-community details:focus-within { outline-color: var(--brand-cobalt); }
+.circle-hub .circle-community details:focus-within { outline-color: var(--brand-accent); }
 .circle-hub .circle-attachment input::file-selector-button {
-  color: var(--brand-cobalt);
+  color: var(--brand-accent);
   background: var(--brand-paper);
   border-color: var(--brand-silver);
 }

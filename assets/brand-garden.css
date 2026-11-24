@@ -51,8 +51,8 @@
 .garden-page .garden-intro .garden-destinations a:is(:hover, :focus-visible),
 .garden-page .garden-map .garden-avatar[open] > summary {
   color: var(--garden-paper);
-  background: var(--brand-cobalt);
-  border-color: var(--brand-cobalt);
+  background: var(--brand-accent);
+  border-color: var(--brand-accent);
 }
 
 .garden-page .garden-map-controls button,
@@ -81,7 +81,7 @@
 
 .garden-page .garden-station :is(a, .circle-reply-button),
 .garden-page .garden-live {
-  color: var(--brand-cobalt);
+  color: var(--brand-accent);
 }
 
 .garden-page .garden-station :is(fieldset, .circle-thread, .station-fold, .circle-attachment),
@@ -107,14 +107,14 @@
 }
 
 .garden-page :is(.garden-station, .garden-avatar) input:is([type=checkbox], [type=radio]) {
-  accent-color: var(--brand-cobalt);
+  accent-color: var(--brand-accent);
 }
 
 .garden-page .garden-station :is(button[type=submit], .primary, .circle-question-result button),
 .garden-page .garden-avatar button,
 .garden-page .button.primary {
   color: var(--brand-button-ink);
-  background: var(--brand-orange);
+  background: var(--brand-accent);
   border-color: transparent;
 }
 
@@ -127,7 +127,7 @@
 
 .garden-page .garden-main :is(a, button, summary, input, select, textarea, canvas):focus-visible,
 .garden-page .garden-dialog :focus-visible {
-  outline: 2px solid var(--brand-cobalt);
+  outline: 2px solid var(--brand-accent);
   outline-offset: 2px;
 }
 .garden-page .garden-map-controls button:focus-visible {

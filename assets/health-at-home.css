@@ -116,14 +116,14 @@
 .bed-comparison {
   padding: var(--section-space) 0;
   background: var(--brand-porcelain, #f2efe8);
-  color: var(--brand-graphite, #282d32);
+  color: var(--brand-graphite);
   text-align: center;
 }
 .bed-comparison .section-heading { margin-bottom: clamp(1.2rem, 2.5vw, 2rem); }
 .bed-comparison .care-matrix {
-  border: 1px solid #c9c3b9;
+  border: 1px solid var(--brand-silver);
   border-radius: 18px;
-  background: #fcfaf6;
+  background: var(--brand-porcelain);
   overflow: hidden;
   margin-bottom: clamp(1.1rem, 2vw, 1.6rem);
 }
@@ -137,24 +137,24 @@
 }
 .bed-comparison th { font-weight: 650; }
 .bed-comparison thead th {
-  background: #eeebe4;
+  background: var(--brand-paper);
   font-size: clamp(.95rem, 1.4vw, 1.2rem);
   text-wrap: balance;
 }
 .bed-comparison thead th:first-child { width: 20%; }
 .bed-comparison thead .compare-featured {
-  background: #282d32; color: #fffaf3;
-  border-top: 4px solid #ea5f02; font-size: 1rem;
+  background: var(--brand-graphite); color: #fffaf3;
+  border-top: 4px solid var(--brand-orange); font-size: 1rem;
 }
 .bed-comparison .compare-featured strong { display: block; font-size: 1.37em; letter-spacing: -.035em; }
-.bed-comparison tbody :is(th,td) { border-top: 1px solid #ddd8cf; font-size: clamp(.94rem, 1.25vw, 1.05rem); }
+.bed-comparison tbody :is(th,td) { border-top: 1px solid var(--brand-divider); font-size: clamp(.94rem, 1.25vw, 1.05rem); }
 .bed-comparison tbody th { background: #f6f3ed; }
 .bed-comparison tbody .compare-featured { background: #f9e9d9; color: #572f1b; font-weight: 650; }
 .bed-comparison .matrix-dash { color: #68645e; }
 .bed-comparison .matrix-sr { position: absolute; width: 1px; height: 1px; clip-path: inset(50%); overflow: hidden; white-space: nowrap; }
 .bed-comparison #compare-note {
-  width: 100%; max-width: none; margin: 0; padding: .75rem 1rem; border-top: 1px solid #d8d2c8;
-  color: #575752; font-size: .87rem; line-height: 1.45; text-align: center;
+  width: 100%; max-width: none; margin: 0; padding: .75rem 1rem; border-top: 1px solid var(--brand-divider);
+  color: var(--brand-muted); font-size: .87rem; line-height: 1.45; text-align: center;
 }
 .bed-comparison .comparison-picker { display: none; }
 
@@ -170,18 +170,18 @@
   .bed-comparison .comparison-picker label { position: relative; flex: 1; max-width: 8rem; margin: 0; }
   .bed-comparison .comparison-picker input { position: absolute; opacity: 0; inset: 0; width: 100%; height: 100%; margin: 0; cursor: pointer; }
   .bed-comparison .comparison-picker span {
-    display: grid; place-items: center; min-height: 44px; border: 1px solid #c9c3b9;
+    display: grid; place-items: center; min-height: 44px; border: 1px solid var(--brand-silver);
     border-radius: 3rem; line-height: 1.15; font-size: .95rem;
   }
-  .bed-comparison .comparison-picker input:checked + span { background: #282d32; border-color: #282d32; color: white; }
-  .bed-comparison .comparison-picker input:focus-visible + span { outline: 3px solid #2446a8; outline-offset: 2px; }
+  .bed-comparison .comparison-picker input:checked + span { background: var(--brand-graphite); border-color: var(--brand-graphite); color: white; }
+  .bed-comparison .comparison-picker input:focus-visible + span { outline: 3px solid var(--brand-accent); outline-offset: 2px; }
   .bed-comparison :is(table, thead, tbody) { display: block; }
   .bed-comparison tr { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .bed-comparison :is(th, td) { display: grid; place-content: center; padding: .66rem .46rem; }
   .bed-comparison thead th:first-child { display: none; }
   .bed-comparison thead th { font-size: .99rem; }
-  .bed-comparison thead .compare-featured { border-top: 0; box-shadow: inset 0 3px #ea5f02; }
-  .bed-comparison tbody th { grid-column: 1 / -1; padding: .42rem .6rem; background: #eeebe4; }
+  .bed-comparison thead .compare-featured { border-top: 0; box-shadow: inset 0 3px var(--brand-orange); }
+  .bed-comparison tbody th { grid-column: 1 / -1; padding: .42rem .6rem; background: var(--brand-paper); }
   .bed-comparison tbody td { border-top: 0; }
   .bed-comparison .care-matrix:has([value="collar"]:checked) :is(.compare-bed, .compare-feeder),
   .bed-comparison .care-matrix:has([value="bed"]:checked) :is(.compare-collar, .compare-feeder),

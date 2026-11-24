@@ -1,24 +1,25 @@
-/* WoafyPet — Warm Vitality. The six reference swatches are shared by every page. */
+/* Colors sampled from woafy.pet’s editorial sections, controls and footer. */
 :root {
-  --brand-orange: #EA5F02;
-  --brand-porcelain: #F2EFE8;
-  --brand-graphite: #282D32;
-  --brand-silver: #A8ADB2;
-  --brand-cognac: #865B40;
-  --brand-cobalt: #2446A8;
-  /* Full-strength graphite on orange is only 4.06:1 for small text. */
-  --brand-button-ink: #171A1D;
-  --brand-paper: color-mix(in srgb, var(--brand-porcelain) 60%, white);
-  --brand-divider: color-mix(in srgb, var(--brand-silver) 56%, var(--brand-porcelain));
-  --brand-muted: color-mix(in srgb, var(--brand-graphite) 74%, var(--brand-silver));
-  --brand-orange-hover: color-mix(in srgb, var(--brand-orange) 80%, var(--brand-porcelain));
+  --brand-porcelain: #FBF6EF;
+  --brand-paper: #F4F1EE;
+  --brand-graphite: #211B17;
+  --brand-night: #15110F;
+  --brand-muted: #5D5148;
+  --brand-divider: #E9DED2;
+  --brand-silver: #BDAE9E;
+  --brand-cognac: #704624;
+  --brand-accent: #A95527;
+  --brand-orange: #B56534;
+  --brand-button-ink: #fff;
+  --brand-hover: #9E542C;
+  --section-gap: clamp(12px, 1.25vw, 20px);
 }
 
 :root, html body[class] {
   --canvas: var(--brand-porcelain);
   --hero-paper: var(--brand-porcelain);
   --ink: var(--brand-graphite);
-  --night: var(--brand-graphite);
+  --night: var(--brand-night);
   --muted: var(--brand-muted);
   --line: var(--brand-divider);
   --oat: var(--brand-paper);
@@ -31,10 +32,10 @@
 html body[class] {
   background-color: var(--brand-porcelain);
   color: var(--brand-graphite);
-  accent-color: var(--brand-cobalt);
+  accent-color: var(--brand-accent);
 }
 
-::selection { background: var(--brand-cobalt); color: var(--brand-porcelain); }
+::selection { background: var(--brand-accent); color: var(--brand-porcelain); }
 
 html body[class] > .site-header,
 html body[class] .site-header #site-nav,
@@ -46,7 +47,7 @@ html body[class] .site-header #site-nav .care-menu > div {
 .site-header #site-nav :is(a, summary) { color: var(--brand-graphite); }
 .site-header #site-nav :is(a, summary):hover,
 .site-header #site-nav a[aria-current="page"] {
-  color: var(--brand-cobalt);
+  color: var(--brand-accent);
   text-decoration: underline;
   text-underline-offset: .28em;
 }
@@ -55,12 +56,12 @@ html body[class] .site-header #site-nav .care-menu > div {
 /* These controls also appear inside the legacy templates, whose colors use !important. */
 html body[class] :is(main, #main, .cart-drawer, dialog) :is(a, button).button {
   color: var(--brand-button-ink) !important;
-  background: var(--brand-orange) !important;
-  border-color: var(--brand-orange) !important;
+  background: var(--brand-accent) !important;
+  border-color: var(--brand-accent) !important;
 }
 html body[class] :is(main, #main, .cart-drawer, dialog) :is(a, button).button:hover {
   color: var(--brand-button-ink) !important;
-  background: var(--brand-orange-hover) !important;
+  background: var(--brand-hover) !important;
   border-color: var(--brand-cognac) !important;
 }
 html body[class] :is(main, #main, .cart-drawer, dialog) :is(a, button).button.secondary {
@@ -78,15 +79,15 @@ html body[class] :is(main, #main, .cart-drawer, dialog) button.button:disabled {
   border-color: var(--brand-silver) !important;
 }
 html body[class] :is(a, summary, button, input, select, textarea, [tabindex]):focus-visible {
-  outline: 3px solid var(--brand-cobalt) !important;
+  outline: 3px solid var(--brand-accent) !important;
   outline-offset: 3px;
   box-shadow: 0 0 0 3px var(--brand-porcelain);
 }
 
 html body[class] > footer {
-  background: var(--brand-graphite) !important;
+  background: var(--brand-night) !important;
   color: var(--brand-porcelain) !important;
-  border-color: var(--brand-silver) !important;
+  border-color: var(--brand-graphite) !important;
 }
 html body[class] > footer :is(a, p) { color: var(--brand-porcelain) !important; }
 html body[class] > footer small { color: var(--brand-silver) !important; }
@@ -94,4 +95,10 @@ html body[class] > footer a:hover {
   text-decoration: underline;
   text-underline-offset: .28em;
   text-decoration-color: var(--brand-orange);
+}
+
+
+/* Separate neighboring chapters without changing spacing inside forms, grids or the 3D world. */
+body[class] :where(main, #main-content) > :where(header, section) + section:not([hidden]) {
+  margin-block-start: var(--section-gap);
 }
