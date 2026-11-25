@@ -102,3 +102,10 @@ html body[class] > footer a:hover {
 body[class] :where(main, #main-content) > :where(header, section) + section:not([hidden]) {
   margin-block-start: var(--section-gap);
 }
+
+/* Let editorial introductions use the section gutters on every page. */
+body[class] :is(#main, #main-content, main) :is(.section-heading, .care-heading, .editorial-heading, .directory-hero-heading),
+body[class] :is(#main, #main-content, main) :is(.section-heading, .care-heading, .editorial-heading, .directory-hero-heading) > :is(h1, h2, p) {
+  max-width: none;
+  text-wrap: balance;
+}

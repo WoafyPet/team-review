@@ -18,13 +18,20 @@
   margin-inline: auto;
 }
 
-.pain-at-home h2 span { display: block; }
-.pain-at-home h2 { max-width: 21ch; margin-inline: auto; }
+.pain-at-home-layout {
+  max-width: none;
+  grid-template-areas: "title photo" "intro intro";
+  row-gap: clamp(18px, 2vw, 30px);
+}
+.pain-at-home h2 { grid-area: title; margin: 0; text-wrap: balance; }
+.pain-at-home-layout > p { grid-area: intro; }
+.pain-at-home-layout > img { grid-area: photo; justify-self: center; max-width: 42rem; }
 .pain-at-home p,
 .health-at-home header p {
-  max-width: 47ch;
-  margin: 14px auto 0;
+  width: 100%;
+  margin: 0;
   color: var(--muted);
+  text-wrap: balance;
 }
 
 .health-at-home a,
@@ -44,7 +51,11 @@
 }
 
 .pain-at-home-layout > img { aspect-ratio: 1.7; object-fit: cover; object-position: center 30%; }
-.health-at-home header p { max-width: 69ch; }
+.health-at-home header p { margin-block-start: 14px; }
+@media (min-width: 701px) {
+  .pain-at-home p, .health-at-home header p { text-wrap: pretty; }
+  :is(.pain-at-home, .health-at-home) .line-ending { display: inline-block; max-width: 100%; }
+}
 .health-at-home-layout { margin-top: clamp(20px, 2.6vw, 36px); }
 .health-at-home-layout > img { aspect-ratio: 16/9; }
 
@@ -82,12 +93,12 @@
 
 /* Match the five signal colors used on the Smart Base page. */
 .home-signal-grid article:nth-child(1) svg { background: #e6eee5; color: #536c57; }
-.home-signal-grid article:nth-child(2) svg { background: #e8edf3; color: #536579; }
+.home-signal-grid article:nth-child(2) svg { background: var(--brand-paper); color: var(--brand-graphite); }
 .home-signal-grid article:nth-child(3) svg { background: #efebdf; color: #74694e; }
-.home-signal-grid article:nth-child(5) svg { background: #ebe9f2; color: #65607b; }
+.home-signal-grid article:nth-child(5) svg { background: #f1e0ce; color: var(--brand-cognac); }
 
 .home-signal-grid h3 { margin: 0; font: 600 clamp(17px, 1.4vw, 21px)/1.2 var(--display); }
-.home-signal-grid p { max-width: 27ch; margin: 6px auto 0; color: var(--muted); font-size: 15px; line-height: 1.42; }
+.home-signal-grid p { text-wrap: balance; margin: 6px auto 0; color: var(--muted); font-size: 15px; line-height: 1.42; }
 .health-sources { margin: 6px auto 0; font-size: 15px; }
 .health-sources summary { display: list-item; width: fit-content; padding-block: 4px; margin-inline: auto; cursor: pointer; }
 .health-sources ul { list-style: none; margin: 6px 0 0; padding: 0; }
@@ -99,7 +110,7 @@
 }
 
 @media (max-width: 700px) {
-  .pain-at-home-layout { grid-template-columns: 1fr; gap: 18px; }
+  .pain-at-home-layout { grid-template: "title" auto "intro" auto "photo" auto / 1fr; gap: 18px; }
   .pain-at-home-layout > img { max-width: 570px; margin-inline: auto; }
   .home-signal-grid { gap: 7px; }
   .home-signal-grid article { padding: 12px 6px; }
